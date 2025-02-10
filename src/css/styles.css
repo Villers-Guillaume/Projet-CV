@@ -10,3 +10,7 @@ header{
     height:1px;
     overflow:hidden;
 }
+
+nav li {
+    list-style: none;
+}
