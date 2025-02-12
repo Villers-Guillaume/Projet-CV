@@ -10,6 +10,15 @@ header{
     height:1px;
     overflow:hidden;
 }
+button{
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Droid Sans", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+}
 
 li {
     list-style: none;
@@ -18,6 +27,10 @@ li {
 nav a {
     text-decoration: none;
     color: white;
+    font-family: "Lora", serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 25.5px;
 }
 
 #profile{
@@ -30,4 +43,33 @@ nav a {
 
 header span {
     color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+}
+#motion::before{
+    content: '';
+    padding: 2px 10px;
+    border: 2px solid #B8A279;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+}
+
+#profile-logo{
+    width: 194px;
+}
+
+#profile-name{
+    font-size: 40px;
+    font-family: "Lora", serif;
+    font-weight: 400;
+    line-height: 44px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
 }
