@@ -8,7 +8,7 @@
 <body>
 <h1 class="hidden">Mon CV</h1>
 <header>
-    <a href="#"><img src="./img/logo.png" alt="logo" width="50px" height="50px"/></a>
+    <a href="#"><img src="./img/logo.png" alt="logo" id="logo-header"/></a>
     <button>Se connecter / S'enregistrer</button>
     <button><span id="motion">Réduire le mouvement</span></button>
     <nav>
@@ -28,9 +28,9 @@
             <source src="/img/profile-background.mp4" type="video/mp4">
         </video>
         <picture>
-            <img src="./img/pdp.png" alt="pdp">
+            <img src="./img/pdp.png" alt="photo de moi">
         </picture>
-        <img src="./img/logo.png" alt="logo" id="profile-logo">
+        <img src="./img/logo.png" alt="logo" class="logo">
         <h2 id="profile-name">Guillaume Villers</h2>
         <p>Etudiant Web Developpeur</p>
     </section>
@@ -227,7 +227,7 @@
                 </p>
             </li>
         </ul>
-        <ul>
+        <ul id="skills-button">
             <li id="html-button">
                 <img src="./img/skills/html-logo-Full.png" alt="Logo HTML">
                 <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
@@ -311,26 +311,29 @@
     </section>
 </main>
 <footer>
-    <img src="./img/logo.png" alt="Mon logo">
-    <a href="#" id="">
+    <img src="./img/logo.png" alt="Mon logo" class="logo">
+    <a href="#" id="button-contact">
         <svg class="tri-force__corner tri-force__corner--tl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
             <path d="M0 15.976L15.983 0H0zM16.026 15.969L32 0H16.026zM0 32l15.966-15.972H0z"></path>
         </svg>
         <svg class="tri-force__corner tri-force__corner--tl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
             <path d="M0 15.976L15.983 0H0zM16.026 15.969L32 0H16.026zM0 32l15.966-15.972H0z"></path>
         </svg>
-        <span>Support</span>
+        <span>Me contacter</span>
     </a>
     <p>Me suivre</p>
     <div id="social-media">
-        <img src="./img/logo-facebook.svg" alt="facebook">
-        <img src="./img/logo-twitter.svg" alt="twitter">
-        <img src="./img/logo-youtube.svg" alt="youtube">
-        <img src="./img/logo-instagram.svg" alt="instagram">
+        <a href="#"><img src="./img/logo-facebook.svg" alt="facebook"></a>
+        <a href="#"><img src="./img/logo-twitter.svg" alt="twitter"></a>
+        <a href="#"><img src="./img/logo-youtube.svg" alt="youtube"></a>
+        <a href="#"><img src="./img/logo-instagram.svg" alt="instagram"></a>
     </div>
     <div>
         <figure>
-            <img src="./img/logoHEPL2.jpg" alt="Haute Ecole de Liège"></img>
+            <img src="./img/logoHEPL2.jpg" alt="Haute Ecole de Liège">
+            <figcaption>
+                Haute Ecole de la Province de Liège
+            </figcaption>
         </figure>
         <p>© 2024 Guillaume Villers. Site réalisé par Guillaume Villers</p>
     </div>
