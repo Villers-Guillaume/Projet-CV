@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Lora";
+    src:
+            url("../fonts/Lora-Italic.ttf");
+}
 .hidden{
     position:absolute;
     left:-10000px;
@@ -13,6 +18,9 @@ body{
 
 header{
     background-color: #e60012;
+}
+#profile-name{
+    color: red;
 }
 #logo-header{
     width: 30px;
