@@ -1,7 +1,10 @@
 @font-face {
     font-family: "Lora";
-    src:
-            url("../fonts/Lora-Italic.ttf");
+    src: url("../fonts/Lora-Italic.ttf");
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSans3-Light.ttf");
 }
 body{
     font-family: "Lora", serif;
@@ -46,11 +49,11 @@ header span {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 15px;
     font-weight: 400;
-    line-height: 22.5px;
+    line-height: 23px;
 }
 #motion::before{
     content: '';
-    padding: 0.25px 8px;
+    padding: 0 10px;
     border: 2px solid #B8A279;
     border-radius: 50%;
     background-color: white;
@@ -64,11 +67,35 @@ nav a {
     color: white;
     font-size: 17px;
     font-weight: 700;
-    line-height: 25.5px;
+    line-height: 26px;
 }
-nav{
+#logo-hepl-menu{
+    width: 60px;
+}
+#menu-bar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu-bar,nav{
     background: url("../../img/noise-background.png") center center, #3D3932;
     background-size: 150px 150px;
+}
+#menu-bar::before,#menu-bar::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(to right, #3D3932,#B8A279,#3D3932);
+    background-position: 0 0;
+    width: 100%;
+    height: 2px;
+}
+#menu-bar::after{
+    top: 60px;
+}
+#menu-bar::before{
+    top: 0px;
 }
 
 #profile{
@@ -96,9 +123,9 @@ body {
 #profile::after{
     content: "";
     background-image: url("/img/border-profile.svg");
-    background-position: 0% 0%;
+    background-position: 0 0;
     height: 18px;
-    border-bottom: solid 0px #CFC19F;
+    border-bottom: solid 0 #CFC19F;
 }
 
 .triforce-border svg{
@@ -113,7 +140,7 @@ body {
 
 #parcours-intro h3{
     font-size: 32px;
-    line-height: 35.2px;
+    line-height: 35px;
 }
 p{
      font-family: "Source Sans Pro", sans-serif;
@@ -185,5 +212,22 @@ footer{
     #logo-header{
         display: block;
     }
-
+    #motion-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+    }
+    #menu{
+        font-family: "Lora", serif;
+        font-size: 18px;
+        background-color: rgb(17, 25, 33);
+        border: 1px solid #B8A279;
+        color: white;
+        padding: 8px;
+        margin-left: 20px;
+    }
+    nav{
+        display: flex;
+    }
 }
