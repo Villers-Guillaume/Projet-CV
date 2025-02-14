@@ -2,36 +2,41 @@
     font-family: "Lora";
     src: url("../fonts/Lora-Italic.ttf");
 }
+
 @font-face {
     font-family: "Source Sans Pro";
     src: url("../fonts/SourceSans3-Light.ttf");
 }
-body{
+
+body {
     font-family: "Lora", serif;
     font-weight: 400;
     margin: 0;
     box-sizing: border-box;
 }
 
-.hidden{
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 #login-bar {
     background-color: #e60012;
 }
-#profile-name{
+
+#profile-name {
     color: white;
 }
-#logo-header{
+
+#logo-header {
     width: 42px;
 }
-button{
+
+button {
     border-style: none;
     background-color: transparent;
     color: white;
@@ -40,7 +45,8 @@ button{
     font-weight: 700;
     line-height: 14px;
 }
-#motion-button{
+
+#motion-button {
     background-color: black;
 }
 
@@ -51,7 +57,8 @@ header span {
     font-weight: 400;
     line-height: 23px;
 }
-#motion::before{
+
+#motion::before {
     content: '';
     padding: 0 10px;
     border: 2px solid #B8A279;
@@ -59,59 +66,75 @@ header span {
     background-color: white;
     margin-right: 10px;
 }
-li {
+
+nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 nav a {
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-size: 17px;
     font-weight: 700;
     line-height: 26px;
 }
-#logo-hepl-menu{
+
+nav svg {
+    fill: #B8A279;
+    opacity: 0.3;
+}
+
+#logo-hepl-menu {
     width: 60px;
 }
-#menu-bar{
+
+#menu-bar {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2px;
 }
-#menu-bar,nav{
+
+#menu-bar, nav {
     background: url("../../img/noise-background.png") center center, #3D3932;
     background-size: 150px 150px;
 }
-#menu-bar::before,#menu-bar::after{
+
+#menu-bar::before, #menu-bar::after {
     content: '';
     position: absolute;
     left: 0;
-    background-image: linear-gradient(to right, #3D3932,#B8A279,#3D3932);
+    background-image: linear-gradient(to right, #3D3932, #B8A279, #3D3932);
     background-position: 0 0;
-    z-index: 2;
     width: 100%;
     height: 2px;
 }
-#menu-bar::after{
+
+#menu-bar::after {
     top: 60px;
 }
-#menu-bar::before{
+
+#menu-bar::before {
     top: -1px;
 }
 
-#profile{
+#profile {
     color: white;
 }
 
-#parcours-first-step,#parcours-second-step,#parcours-thrid-step{
+#parcours-first-step, #parcours-second-step, #parcours-thrid-step {
     color: #3D3932;
 }
 
-.logo{
+.logo {
     width: 198px;
 }
 
-#profile-name{
+#profile-name {
     font-size: 40px;
     line-height: 44px;
 }
@@ -121,7 +144,8 @@ body {
     display: flex;
     flex-direction: column;
 }
-#profile::after{
+
+#profile::after {
     content: "";
     background-image: url("/img/border-profile.svg");
     background-position: 0 0;
@@ -129,33 +153,36 @@ body {
     border-bottom: solid 0 #CFC19F;
 }
 
-.triforce-border svg{
+.triforce-border svg {
     fill: white;
     width: 32px;
     height: 32px;
 }
 
-#parcours-helmo, #parcours-hepl,#parcours-now,#parcours-portfolio {
+#parcours-helmo, #parcours-hepl, #parcours-now, #parcours-portfolio {
     color: rgb(61, 57, 50);
 }
 
-#parcours-intro h3{
+#parcours-intro h3 {
     font-size: 32px;
     line-height: 35px;
 }
-p{
-     font-family: "Source Sans Pro", sans-serif;
+
+p {
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 18px;
     line-height: 27px;
 }
-#skills{
+
+#skills {
     color: rgb(184, 162, 121);;
 }
-#skills svg{
+
+#skills svg {
     fill: rgb(184, 162, 121);
 }
 
-#skills h3, #skills p{
+#skills h3, #skills p {
     color: white;
 }
 
@@ -165,7 +192,8 @@ p{
     width: 14px;
     height: 14px;
 }
-#button-decouvrir{
+
+#button-decouvrir {
     text-decoration: none;
     color: white;
     font-family: "Lora", serif;
@@ -173,7 +201,8 @@ p{
     font-weight: 700;
     line-height: 18px;
 }
-#button-contact{
+
+#button-contact {
     text-decoration: none;
     color: rgb(0, 80, 230);
     font-family: "Lora", serif;
@@ -188,7 +217,7 @@ p{
     height: 14px;
 }
 
-footer{
+footer {
     color: white;
 }
 
@@ -196,30 +225,35 @@ footer{
     width: 48px;
 }
 
-@media screen and (max-width:768px) {
-    html,body{
+@media screen and (max-width: 768px) {
+    html, body {
         width: 100%;
         overflow-x: hidden;
     }
-    #login-bar{
+
+    #login-bar {
         height: 48px;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
-    #login-bar a{
+
+    #login-bar a {
         display: block;
     }
-    #logo-header{
+
+    #logo-header {
         display: block;
     }
-    #motion-button{
+
+    #motion-button {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 32px;
     }
-    #menu{
+
+    #menu {
         font-family: "Lora", serif;
         font-size: 18px;
         background-color: rgb(17, 25, 33);
@@ -228,11 +262,49 @@ footer{
         padding: 10px;
         margin-left: 20px;
     }
-    #logo-hepl-menu{
+
+    #logo-hepl-menu {
         display: block;
         z-index: 3;
     }
-    nav{
+
+    nav {
         display: flex;
+        justify-content: center;
+        padding: 13px;
+    }
+
+    nav ul {
+        padding: 13px;
+    }
+
+    nav li {
+        text-align: center;
+    }
+
+    nav a {
+        padding: 14px 15px 12px;
+        margin: 0 16px;
+    }
+    nav svg{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+        translateY(15%);
+
+    }
+    nav::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        background-image: linear-gradient(to right, #3D3932, #B8A279, #3D3932);
+        background-position: 0 0;
+        width: 100%;
+        height: 2px;
+        top: 400px;
+    }
+    #video-profile{
+        width: 100%;
+        height: 100%;
     }
 }
