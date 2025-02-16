@@ -8,11 +8,21 @@
     src: url("../fonts/SourceSans3-Light.ttf");
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 body {
     font-family: "Lora", serif;
     font-weight: 400;
     margin: 0;
     box-sizing: border-box;
+    background: url("../../img/background.jpg") center center, #3D3932;
 }
 
 .hidden {
@@ -131,12 +141,13 @@ nav svg {
 }
 
 .logo {
-    width: 198px;
+    width: 147px;
 }
 
 #profile-name {
     font-size: 40px;
     line-height: 44px;
+    font-weight: 400;
 }
 
 
@@ -146,11 +157,16 @@ body {
 }
 
 #profile::after {
-    content: "";
-    background-image: url("/img/border-profile.svg");
+    content: '';
+    width: 100%;
+    background-image: url("../../img/border-profile.svg");
     background-position: 0 0;
     height: 18px;
     border-bottom: solid 0 #CFC19F;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .triforce-border svg {
@@ -166,6 +182,7 @@ body {
 #parcours-intro h3 {
     font-size: 32px;
     line-height: 35px;
+    font-weight: 400;
 }
 
 p {
@@ -286,14 +303,15 @@ footer {
         padding: 14px 15px 12px;
         margin: 0 16px;
     }
-    nav svg{
+
+    nav svg {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%)
-        translateY(15%);
+        transform: translateX(-50%) translateY(15%);
 
     }
-    nav::after{
+
+    nav::after {
         content: '';
         position: absolute;
         left: 0;
@@ -303,8 +321,87 @@ footer {
         height: 2px;
         top: 400px;
     }
-    #video-profile{
+
+    #profile {
+        position: relative;
+    }
+
+    #video-container {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
+        overflow: hidden;
+        z-index: -1;
     }
+
+    #video-profile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #profile-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 8px;
+    }
+
+    #photo-of-me {
+        width: 288px;
+        margin-top: 48px;
+    }
+
+    #profile-content p {
+        margin: 0;
+    }
+
+    #profile-content h2 {
+        margin: 0 0 20px;
+    }
+
+    .step-img {
+        width: 358px;
+    }
+
+    #parcours-helmo{
+        padding: 0 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #parcours-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 32px 0;
+    }
+
+    #circle {
+        width: 232px;
+        animation: spin 40s linear infinite;
+    }
+
+    #intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        margin-top: 60px;
+    }
+
+    #intro-content h3 {
+        margin: 0 0 16px;
+    }
+    #intro-content p{
+        margin: 0;
+        text-align: center;
+    }
+
 }

@@ -37,29 +37,35 @@
 </header>
 <main>
     <section id="profile">
-        <video id="video-profile" autoplay loop muted>
-            <source src="/img/profile-background.mp4" type="video/mp4">
-        </video>
-        <picture>
-            <img src="./img/pdp.png" alt="photo de moi">
-        </picture>
-        <img src="./img/logo.png" alt="logo" class="logo">
-        <h2 id="profile-name">Guillaume Villers</h2>
-        <p>Etudiant Web Developpeur</p>
+        <div id="video-container">
+            <video id="video-profile" autoplay loop muted>
+                <source src="/img/profile-background.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="profile-content">
+            <img src="./img/logo.png" alt="logo" class="logo">
+            <h2 id="profile-name">Guillaume Villers</h2>
+            <p>Etudiant Web Developpeur</p>
+            <picture>
+                <img src="./img/pdp.png" alt="photo de moi" id="photo-of-me">
+            </picture>
+        </div>
     </section>
 
     <section id="parcours-helmo">
         <div id="parcours-intro">
-            <h3>Mon parcours</h3>
-            <img src="/img/icon-ornate-circle.svg" alt="cercle" class="circle">
-            <p>J'ai obtenu mon CESS en 2020 au DIC collège à Liège</p>
+            <img src="/img/icon-ornate-circle.svg" alt="cercle" id="circle">
+            <div id="intro-content">
+                <h3>Mon parcours</h3>
+                <p>J'ai obtenu mon CESS en 2020 au DIC collège à Liège</p>
+            </div>
         </div>
         <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
             <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932" stroke-width="2"></path>
             <path fill="#3d3932" d="M15.5 7.5L23 15l-7.5 7.5L8 15z"></path>
         </svg>
         <div id="parcours-first-step">
-            <img src="./img/first-step-info-gestion.png" alt="Image d'un pc avec des visuels de liens et connexions">
+            <img src="./img/first-step-info-gestion.png" alt="Image d'un pc avec des visuels de liens et connexions" class="step-img">
             <p>
                 Septembre 2020, j'ai commencé par faire des études en informatique de gestion à l'Helmo,
                 malheureusement, c'était en plein COVID, donc tous les cours en distanciel.
@@ -73,7 +79,7 @@
         </svg>
         <div id="parcours-second-step">
 
-            <img src="./img/second-step-info-gestion.png" alt="image info gestion">
+            <img src="./img/second-step-info-gestion.png" alt="image info gestion" class="step-img">
             <p>
                 Septembre 2021, j'ai retenté l'Helmo, parce que je mettais le COVID comme raison de mon abandon pour la
                 première année. Sauf que ce n'était pas le COVID mais bien le bachelier.
@@ -83,7 +89,7 @@
     </section>
     <section id="parcours-relance">
         <h3 class="hidden">Parcours Relance</h3>
-        <img src="./img/parcours-third-step-background.jpg" alt="image de fond">
+        <img src="./img/parcours-third-step-background.jpg" alt="image de The Legend of Zelda Skyward Sword">
         <div id="parcours-thrid-step">
             <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
                 <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932"
@@ -117,7 +123,7 @@
     <section id="parcours-hepl">
         <h3 class="hidden">Parcours Hepl, première partie</h3>
         <div id="parcours-fourth-step">
-            <img src="./img/third-step-relance.png" alt="Projet 3D à HEPL">
+            <img src="./img/third-step-relance.png" alt="Relance" class="step-img">
             <p>
                 Septembre 2022, grâce à Relance et des recherches, je me lance dans le bachelier en techniques graphique
                 à HEPL
@@ -129,7 +135,7 @@
             <path fill="#3d3932" d="M12.8 6.5l6.2 8.2 6.2-8.2z"></path>
         </svg>
         <div>
-            <img src="./img/third-step-hepl3D.png" alt="projet 3D">
+            <img src="./img/third-step-hepl3D.png" alt="projet 3D" class="step-img">
             <p>
                 Septembre 2023, pour ma deuxième année, on a un choix d'option, je me suis dirigé en 3D/vidéo
             </p>
