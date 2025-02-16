@@ -60,10 +60,12 @@
                 <p>J'ai obtenu mon CESS en 2020 au DIC collège à Liège</p>
             </div>
         </div>
-        <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
-            <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932" stroke-width="2"></path>
-            <path fill="#3d3932" d="M15.5 7.5L23 15l-7.5 7.5L8 15z"></path>
-        </svg>
+        <div id="icon-timeline">
+            <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
+                <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932" stroke-width="2"></path>
+                <path fill="#3d3932" d="M15.5 7.5L23 15l-7.5 7.5L8 15z"></path>
+            </svg>
+        </div>
         <div id="parcours-first-step">
             <img src="./img/first-step-info-gestion.png" alt="Image d'un pc avec des visuels de liens et connexions" class="step-img">
             <p>
@@ -78,7 +80,6 @@
             <path fill="#3d3932" d="M12.8 6.5l6.2 8.2 6.2-8.2z"></path>
         </svg>
         <div id="parcours-second-step">
-
             <img src="./img/second-step-info-gestion.png" alt="image info gestion" class="step-img">
             <p>
                 Septembre 2021, j'ai retenté l'Helmo, parce que je mettais le COVID comme raison de mon abandon pour la
@@ -87,15 +88,18 @@
             </p>
         </div>
     </section>
+    <div class="border-waves-top"></div>
     <section id="parcours-relance">
         <h3 class="hidden">Parcours Relance</h3>
         <img src="./img/parcours-third-step-background.jpg" alt="image de The Legend of Zelda Skyward Sword">
-        <div id="parcours-thrid-step">
-            <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
-                <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932"
-                      stroke-width="2"></path>
-                <path fill="#3d3932" d="M15.5 7.5L23 15l-7.5 7.5L8 15z"></path>
-            </svg>
+        <div id="parcours-third-step">
+            <div id="icon-timeline-third-step">
+                <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
+                    <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932"
+                          stroke-width="2"></path>
+                    <path fill="#3d3932" d="M15.5 7.5L23 15l-7.5 7.5L8 15z"></path>
+                </svg>
+            </div>
             <div class="triforce-border">
                 <svg class="tri-force__corner tri-force__corner--tl" xmlns="http://www.w3.org/2000/svg"
                      viewBox="0 0 32 32">
@@ -114,12 +118,15 @@
                     <path d="M15.976 32L0 16.017V32zM15.969 15.974L0 0v15.974zM32 32L16.028 16.034V32z"></path>
                 </svg>
             </div>
-            <p>
-                Mars 2022, je décide de participer à un programme de réorientation, appelé "Relance". Qui permet de
-                découvrir pleins de métiers et les différentes possibilités pour trouver sa voie.
-            </p>
+            <div id="relance-content">
+                <p>
+                    Mars 2022, je décide de participer à un programme de réorientation, appelé "Relance". Qui permet de
+                    découvrir pleins de métiers et les différentes possibilités pour trouver sa voie.
+                </p>
+            </div>
         </div>
     </section>
+    <div class="border-waves-bottom"></div>
     <section id="parcours-hepl">
         <h3 class="hidden">Parcours Hepl, première partie</h3>
         <div id="parcours-fourth-step">
@@ -141,15 +148,18 @@
             </p>
         </div>
     </section>
+    <div class="border-waves-top"></div>
     <section id="parcours-now">
         <h3 class="hidden">Maintenant</h3>
         <img src="./img/parcours-now-background.jpg" alt="fond web">
         <div id="parcours-fifth-step">
-            <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
-                <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932"
-                      stroke-width="2"></path>
-                <path fill="#3d3932" d="M15.5 7.5L23 15l-7.5 7.5L8 15z"></path>
-            </svg>
+            <div id="icon-timeline-fifth-step">
+                <svg class="timeline__icon diamond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31">
+                    <path d="M29.1 15L15.5 28.6 1.9 15 15.5 1.4 29.1 15z" fill="none" stroke="#3d3932"
+                          stroke-width="2"></path>
+                    <path fill="#3d3932" d="M15.5 7.5L23 15l-7.5 7.5L8 15z"></path>
+                </svg>
+            </div>
             <div class="triforce-border">
                 <svg class="tri-force__corner tri-force__corner--tl" xmlns="http://www.w3.org/2000/svg"
                      viewBox="0 0 32 32">
@@ -168,12 +178,15 @@
                     <path d="M15.976 32L0 16.017V32zM15.969 15.974L0 0v15.974zM32 32L16.028 16.034V32z"></path>
                 </svg>
             </div>
-            <p>
-                Aujourd'hui, je suis toujours en 2ème année mais cette fois j'ai changé d'option, je suis maintenant en
-                web.
-            </p>
+            <div id="now-content">
+                <p>
+                    Aujourd'hui, je suis toujours en 2ème année mais cette fois j'ai changé d'option, je suis maintenant en
+                    web.
+                </p>
+            </div>
         </div>
     </section>
+    <div class="border-waves-bottom"></div>
     <section id="skills">
         <h2>Mes compétences</h2>
         <p>

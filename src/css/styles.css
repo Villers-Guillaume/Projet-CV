@@ -23,6 +23,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     background: url("../../img/background.jpg") center center, #3D3932;
+    text-align: center;
 }
 
 .hidden {
@@ -177,6 +178,10 @@ body {
 
 #parcours-helmo, #parcours-hepl, #parcours-now, #parcours-portfolio {
     color: rgb(61, 57, 50);
+}
+
+#parcours-helmo p {
+    margin: 0;
 }
 
 #parcours-intro h3 {
@@ -368,12 +373,13 @@ footer {
         width: 358px;
     }
 
-    #parcours-helmo{
+    #parcours-helmo {
         padding: 0 8px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
 
     #parcours-intro {
         display: flex;
@@ -399,9 +405,138 @@ footer {
     #intro-content h3 {
         margin: 0 0 16px;
     }
-    #intro-content p{
+
+    #intro-content p {
         margin: 0;
         text-align: center;
     }
 
+    #icon-timeline {
+        margin-bottom: 80px;
+    }
+
+    .diamond {
+        margin-bottom: -22px;
+    }
+
+    #parcours-first-step {
+        padding: 0 0 32px;
+    }
+
+    #parcours-second-step {
+        padding: 0 0 80px;
+    }
+
+    #parcours-helmo {
+        position: relative;
+    }
+    .border-waves-top{
+        position: relative;
+    }
+    .border-waves-top::after {
+        content: '';
+        width: 100%;
+        background-image: url("../../img/border-waves.svg");
+        background-repeat: repeat-x;
+        background-position: 0 0;
+        height: 20px;
+        border-bottom: solid 20px #CFC19F;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    #parcours-relance, #parcours-now {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #parcours-relance img, #parcours-now img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    #parcours-third-step, #parcours-fifth-step {
+        padding: 0 16px;
+        position: relative;
+    }
+
+    #relance-content,#now-content {
+        background-color: white;
+        clip-path: polygon(0 36px, 36px 0, calc(100% - 36px) 0, 100% 36px, 100% calc(100% - 36px), calc(100% - 36px) 100%, 36px 100%, 0 calc(100% - 36px));
+        padding: 24px;
+        margin: 8px 0;
+    }
+
+    .triforce-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tri-force__corner {
+        position: absolute;
+    }
+
+    .tri-force__corner--tl {
+        top: 8px;
+        left: 16px;
+    }
+
+    .tri-force__corner--tr {
+        top: 8px;
+        right: 16px;
+    }
+
+    .tri-force__corner--br {
+        bottom: 8px;
+        right: 16px;
+    }
+
+    .tri-force__corner--bl {
+        bottom: 8px;
+        left: 16px;
+    }
+
+    #icon-timeline-third-step, #icon-timeline-fifth-step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .border-waves-bottom {
+        position: relative;
+    }
+
+    .border-waves-bottom::after {
+        content: '';
+        width: 100%;
+        background-image: url("../../img/border-waves.svg");
+        background-repeat: repeat-x;
+        background-position: 0 0;
+        height: 20px;
+        border-top: solid 20px #CFC19F;
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+    }
+    #parcours-hepl{
+        padding: 80px 16px 32px;
+    }
 }
