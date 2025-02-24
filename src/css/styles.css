@@ -196,10 +196,12 @@ p {
     font-size: 18px;
     line-height: 27px;
 }
+
 #skills ul {
     list-style: none;
     padding: 0;
 }
+
 #skills {
     color: rgb(184, 162, 121);;
     background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../img/backgroundSkills.png");
@@ -207,7 +209,8 @@ p {
     background-position: center center;
     padding: 80px 16px 64px;
 }
-#skills-container{
+
+#skills-container {
     text-align: center;
     display: grid;
     gap: 24px;
@@ -216,27 +219,32 @@ p {
         "button"
         "info";
 }
+
 #skills-button {
     display: block;
     white-space: nowrap;
     margin: 0 calc(50vw - 42px);
 }
-#skills-button button.active{
+
+#skills-button button.active {
     outline: 1px solid #B8A279;
     outline-offset: 5px;
 }
-#skills-button button{
-    background-color: rgba(0,0,0,0.5);
+
+#skills-button button {
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0 3px 10px 3px;
     border: 1px solid #B8A279;
     position: relative;
 }
+
 #skills-button li {
     display: inline-block;
     margin-right: 24px;
     width: 94px;
 }
-#skills-button svg{
+
+#skills-button svg {
     width: 62px;
     height: 38px;
     color: #B8A279;
@@ -246,7 +254,8 @@ p {
     bottom: -30px;
     margin: 0 auto;
 }
-#skills-button img{
+
+#skills-button img {
     width: 86px;
     position: relative;
     margin-top: -8px;
@@ -265,34 +274,37 @@ p {
 #skills svg {
     fill: rgb(184, 162, 121);
 }
-#skills-logo{
+
+#skills-logo {
     grid-area: image;
 }
-#skills-logo img{
+
+#skills-logo img {
     width: 358px;
 }
 
-#skills-info{
+#skills-info {
     grid-area: info;
     justify-self: center;
 }
-#skills-info svg{
+
+#skills-info svg {
     width: 37px;
     margin-bottom: 16px;
 }
-#skills-info p{
+
+#skills-info p {
     margin: 0;
 }
 
-#skills-info h3{
+#skills-info h3 {
     margin-bottom: 12px;
 }
+
 #skills h2, #skills p, #skills h3 {
     color: white;
     font-weight: 400;
 }
-
-
 
 #button-decouvrir svg {
     fill: rgb(0, 80, 230);
@@ -300,13 +312,63 @@ p {
     height: 14px;
 }
 
+#portfolio-content h2 {
+    margin: 0 0 16px;
+}
+
+#portfolio-link {
+    display: inline-block;
+    position: relative;
+}
+
 #button-decouvrir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: white;
     font-family: "Lora", serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
+    margin: 0;
+    padding: 2px;
+}
+
+#button-decouvrir span {
+    background-size: 300% 100%;
+    background: linear-gradient(45deg, #0050E6, #003DA0) 50% 0;
+    padding: 13px 25px 17px 25px;
+    clip-path: polygon(0 19px, 19px 0, 100% 0, 100% calc(100% - 19px), calc(100% - 19px) 100%, 0 100%);
+}
+
+#button-decouvrir .tri-force__corner--tl {
+    top: 2px;
+    left: 2px;
+}
+
+#button-decouvrir .tri-force__corner--br {
+    bottom: 2px;
+    right: 2px;
+}
+
+#border-swirl {
+    position: relative;
+    border-bottom: solid 3px #CFC19F;
+    margin-top: 50px;
+}
+
+#border-swirl::after {
+    content: '';
+    width: 100%;
+    background-image: url("../../img/border-swirls.svg");
+    background-position: 0 0;
+    height: 32px;
+    border-bottom: solid 2px #CFC19F;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
 }
 
 #button-contact {
@@ -316,6 +378,7 @@ p {
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
+
 }
 
 #button-contact svg {
@@ -325,12 +388,69 @@ p {
 
 footer {
     color: white;
+    background: url("../../img/noise-background.png") center center, linear-gradient(#5A5550, #3D3932);
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
 }
 
+footer .logo {
+    align-self: center;
+    margin-top: -130px;
+}
+
+#contact-link {
+    display: inline-block;
+
+    margin: 30px 0;
+    padding: 0 8px;
+
+}
+#contact-link span {
+    display: inline-block;
+    background-color: #F3F2EE;
+    clip-path: polygon(0 19px, 19px 0, 100% 0, 100% calc(100% - 19px), calc(100% - 19px) 100%, 0 100%);
+    padding: 13px 25px 17px 25px;
+}
+#button-contact{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#button-contact .tri-force__corner--tl{
+    top: 0;
+    left: 0px;
+}
+
+#button-contact .tri-force__corner--br{
+    bottom: 0;
+    right: 0;
+}
 #social-media img {
     width: 48px;
 }
+#follow {
+    margin: 0;
+    font-weight: 700;
 
+}
+#social-media{
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+footer figcaption{
+    font-size: 14px;
+    font-family: "Source Sans Pro",sans-serif;
+}
+#copyright{
+    font-size: 14px;
+}
 @media screen and (max-width: 768px) {
     html, body {
         width: 100%;
@@ -563,7 +683,7 @@ footer {
         position: relative;
     }
 
-    #relance-content, #now-content,#portfolio-content {
+    #relance-content, #now-content, #portfolio-content {
         background-color: white;
         clip-path: polygon(0 36px, 36px 0, calc(100% - 36px) 0, 100% 36px, 100% calc(100% - 36px), calc(100% - 36px) 100%, 36px 100%, 0 calc(100% - 36px));
         padding: 24px;
@@ -633,14 +753,19 @@ footer {
         padding: 80px 16px 32px;
     }
 
-    #parcours-portfolio{
+    #parcours-portfolio {
         position: relative;
-        background: url("../../img/parcours-portfolio-background.png");
-        background-size: contain;
-        background-repeat: no-repeat;
+        background: url("../../img/parcours-portfolio-background.png") no-repeat center;
+        background-size: cover;
         padding: 48px 8px;
+        margin: 0 auto;
     }
-    #parcours-portfolio::before{
+
+    #portfolio-content {
+        position: relative;
+    }
+
+    #parcours-portfolio::before {
         content: '';
         width: 100%;
         background-image: url("../../img/border-profile.svg");
@@ -653,4 +778,27 @@ footer {
         top: 0;
     }
 
+    #parcours-portfolio .triforce-border .tri-force__corner--tl {
+        top: 56px;
+        left: 16px;
+    }
+
+    #parcours-portfolio .triforce-border .tri-force__corner--tr {
+        top: 56px;
+        right: 16px;
+    }
+
+    #parcours-portfolio .triforce-border .tri-force__corner--bl {
+        bottom: 56px;
+        left: 16px;
+    }
+
+    #parcours-portfolio .triforce-border .tri-force__corner--br {
+        bottom: 56px;
+        right: 16px;
+    }
+
+    .pad--8 {
+        padding: 0 8px;
+    }
 }
