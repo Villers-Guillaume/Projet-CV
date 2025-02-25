@@ -17,6 +17,11 @@
     }
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Lora", serif;
     font-weight: 400;
@@ -24,7 +29,10 @@ body {
     box-sizing: border-box;
     background: url("../../img/background.jpg") center center, #3D3932;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .hidden {
     position: absolute;
@@ -34,19 +42,25 @@ body {
     height: 1px;
     overflow: hidden;
 }
-
 #login-bar {
     background-color: #e60012;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#profile-name {
-    color: white;
+#login-bar a {
+    display: block;
 }
-
 #logo-header {
+    display: block;
     width: 42px;
+    margin-left: 30px;
 }
-
+#login-bar button{
+    margin-right: 30px;
+}
 button {
     border-style: none;
     background-color: transparent;
@@ -58,9 +72,26 @@ button {
 }
 
 #motion-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
     background-color: black;
 }
 
+#menu {
+    font-family: "Lora", serif;
+    font-size: 18px;
+    background-color: rgb(17, 25, 33);
+    border: 1px solid #B8A279;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+#logo-hepl-menu {
+    display: block;
+}
 header span {
     color: white;
     font-family: "Source Sans Pro", sans-serif;
@@ -77,10 +108,37 @@ header span {
     background-color: white;
     margin-right: 10px;
 }
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 13px;
+}
+
+nav li {
+    text-align: center;
+}
+nav svg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(15%);
+    fill: #B8A279;
+    opacity: 0.3;
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(to right, #3D3932, #B8A279, #3D3932);
+    background-position: 0 0;
+    width: 100%;
+    height: 2px;
+    top: 400px;
+}
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 13px;
     margin: 0;
 }
 
@@ -91,11 +149,8 @@ nav a {
     font-size: 17px;
     font-weight: 700;
     line-height: 26px;
-}
-
-nav svg {
-    fill: #B8A279;
-    opacity: 0.3;
+    padding: 14px 15px 12px;
+    margin: 0 16px;
 }
 
 #logo-hepl-menu {
@@ -132,14 +187,43 @@ nav svg {
 #menu-bar::before {
     top: -1px;
 }
+#profile {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
 
+#video-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#video-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 8px;
+}
 #profile {
     color: white;
 }
 
 #parcours-first-step, #parcours-second-step, #parcours-thrid-step {
     color: #3D3932;
-
 }
 
 .logo {
@@ -150,12 +234,6 @@ nav svg {
     font-size: 40px;
     line-height: 44px;
     font-weight: 400;
-}
-
-
-body {
-    display: flex;
-    flex-direction: column;
 }
 
 #profile::after {
@@ -170,13 +248,59 @@ body {
     left: 0;
     bottom: 0;
 }
-
-.triforce-border svg {
-    fill: white;
-    width: 32px;
-    height: 32px;
+#parcours-helmo {
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
+#parcours-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+}
+
+#circle {
+    width: 300px;
+    animation: spin 40s linear infinite;
+}
+
+#intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: 90px;
+}
+
+#intro-content h3 {
+    margin: 0 0 16px;
+}
+
+#intro-content p {
+    margin: 0;
+    text-align: center;
+}
+
+#icon-timeline {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.diamond {
+    margin-bottom: -22px;
+}
+
+#parcours-first-step {
+    padding: 0 0 32px;
+    z-index: 6;
+}
 #parcours-helmo, #parcours-hepl, #parcours-now, #parcours-portfolio {
     color: rgb(61, 57, 50);
 }
@@ -191,11 +315,139 @@ body {
     font-weight: 400;
 }
 
+.triforce-border svg {
+    fill: white;
+    width: 32px;
+    height: 32px;
+}
+
 p {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 18px;
     line-height: 27px;
 }
+#parcours-second-step {
+    padding: 0 0 90px;
+    z-index: 6;
+}
+
+#parcours-helmo {
+    position: relative;
+    z-index: 6;
+    padding-bottom: 30px;
+}
+
+.border-waves-top {
+    position: relative;
+}
+
+.border-waves-top::after {
+    content: '';
+    width: 100%;
+    background-image: url("../../img/border-waves.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    height: 20px;
+    border-bottom: solid 20px #CFC19F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#parcours-relance, #parcours-now {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#parcours-relance img, #parcours-now img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#parcours-third-step, #parcours-now-step {
+    padding: 0 16px;
+    position: relative;
+}
+
+#relance-content, #now-content, #portfolio-content {
+    display: inline-block;
+    background-color: white;
+    clip-path: polygon(0 36px, 36px 0, calc(100% - 36px) 0, 100% 36px, 100% calc(100% - 36px), calc(100% - 36px) 100%, 36px 100%, 0 calc(100% - 36px));
+    padding: 24px;
+    margin: 8px 0;
+}
+
+.triforce-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tri-force__corner {
+    position: absolute;
+}
+
+.tri-force__corner--tl {
+    top: 8px;
+    left: 0;
+}
+
+.tri-force__corner--tr {
+    top: 8px;
+    right: 0;
+}
+
+.tri-force__corner--br {
+    bottom: 8px;
+    right: 0;
+}
+
+.tri-force__corner--bl {
+    bottom: 8px;
+    left: 0;
+}
+
+#icon-timeline-third-step, #icon-timeline-fifth-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.step-container{
+    display: inline-block;
+    position: relative;
+    width: 50%;
+}
+
+.border-waves-bottom {
+    position: relative;
+}
+
+.border-waves-bottom::before {
+    content: '';
+    width: 100%;
+    background-image: url("../../img/border-waves.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    height: 20px;
+    border-top: solid 20px #CFC19F;
+    position: absolute;
+    left: 0;
+}
+
 
 #skills ul {
     list-style: none;
@@ -208,16 +460,6 @@ p {
     background-color: #003DA0;
     background-position: center center;
     padding: 80px 16px 64px;
-}
-
-#skills-container {
-    text-align: center;
-    display: grid;
-    gap: 24px;
-    grid-template-columns: 1fr;
-    grid-template-areas:"image"
-        "button"
-        "info";
 }
 
 #skills-button {
@@ -244,6 +486,10 @@ p {
     width: 94px;
 }
 
+#skills-logo {
+    grid-area: image;
+}
+
 #skills-button svg {
     width: 62px;
     height: 38px;
@@ -254,40 +500,30 @@ p {
     bottom: -30px;
     margin: 0 auto;
 }
-
 #skills-button img {
     width: 86px;
     position: relative;
     margin-top: -8px;
 }
+#skills-info {
+    grid-area: content;
+}
 
 #skills-button-container {
     grid-area: button;
-    width: 100vw;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 20px 0;
     justify-self: center;
-    margin: 0 -16px;
 }
 
 #skills svg {
     fill: rgb(184, 162, 121);
 }
 
-#skills-logo {
-    grid-area: image;
-}
-
 #skills-logo img {
     width: 358px;
 }
-
-#skills-info {
-    grid-area: info;
-    justify-self: center;
+.skill-logo-li{
+    display: inline-block;
 }
-
 #skills-info svg {
     width: 37px;
     margin-bottom: 16px;
@@ -304,6 +540,59 @@ p {
 #skills h2, #skills p, #skills h3 {
     color: white;
     font-weight: 400;
+}
+#parcours-hepl {
+    padding: 80px 16px 32px;
+}
+#portfolio-container{
+    display: inline-block;
+    position: relative;
+}
+#portfolio-content{
+    padding: 40px 100px;
+}
+#parcours-portfolio {
+    background: url("../../img/parcours-portfolio-background.png") no-repeat center;
+    background-size: cover;
+    padding: 48px 8px;
+    margin: 0 auto;
+    position: relative;
+}
+#parcours-portfolio::before {
+    content: '';
+    width: 100%;
+    background-image: url("../../img/border-profile.svg");
+    background-position: 0 0;
+    height: 18px;
+    border-bottom: solid 0 #CFC19F;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#parcours-portfolio .triforce-border .tri-force__corner--tl {
+    top: 8px;
+    left: 0;
+}
+
+#parcours-portfolio .triforce-border .tri-force__corner--tr {
+    top: 8px;
+    right: 0;
+}
+
+#parcours-portfolio .triforce-border .tri-force__corner--bl {
+    bottom: 8px;
+    left: 0px;
+}
+
+#parcours-portfolio .triforce-border .tri-force__corner--br {
+    bottom: 8px;
+    right: 0px;
+}
+
+.pad--8 {
+    padding: 0 8px;
 }
 
 #button-decouvrir svg {
@@ -404,10 +693,8 @@ footer .logo {
 
 #contact-link {
     display: inline-block;
-
     margin: 30px 0;
     padding: 0 8px;
-
 }
 #contact-link span {
     display: inline-block;
@@ -436,7 +723,6 @@ footer .logo {
 #follow {
     margin: 0;
     font-weight: 700;
-
 }
 #social-media{
     margin: 16px;
@@ -451,118 +737,20 @@ footer figcaption{
 #copyright{
     font-size: 14px;
 }
-@media screen and (max-width: 768px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    #login-bar {
-        height: 48px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #login-bar a {
-        display: block;
-    }
-
-    #logo-header {
-        display: block;
-    }
-
-    #motion-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 32px;
-    }
-
-    #menu {
-        font-family: "Lora", serif;
-        font-size: 18px;
-        background-color: rgb(17, 25, 33);
-        border: 1px solid #B8A279;
-        color: white;
-        padding: 10px;
-        margin-left: 20px;
-    }
-
-    #logo-hepl-menu {
-        display: block;
-        z-index: 3;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
-        padding: 13px;
-    }
-
-    nav ul {
-        padding: 13px;
-    }
-
-    nav li {
-        text-align: center;
-    }
-
-    nav a {
-        padding: 14px 15px 12px;
-        margin: 0 16px;
-    }
-
-    nav svg {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%) translateY(15%);
-
-    }
-
-    nav::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        background-image: linear-gradient(to right, #3D3932, #B8A279, #3D3932);
-        background-position: 0 0;
-        width: 100%;
-        height: 2px;
-        top: 400px;
-    }
-
+@media screen and (max-width: 600px) {
     #profile {
         position: relative;
-    }
-
-    #video-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        z-index: -1;
-    }
-
-    #video-profile {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    #profile-content {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-        margin: 0 auto;
-        padding: 0 8px;
     }
-
-    #photo-of-me {
+    #picture-of-me {
         width: 288px;
         margin-top: 48px;
+    }
+    #profile-content{
+        margin-top: 24px;
     }
 
     #profile-content p {
@@ -577,228 +765,84 @@ footer figcaption{
         width: 358px;
     }
 
-    #parcours-helmo {
-        padding: 0 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    #parcours-intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        padding: 32px 0;
-    }
-
     #circle {
         width: 232px;
-        animation: spin 40s linear infinite;
     }
-
-    #intro-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
+    #intro-content{
         margin-top: 60px;
     }
-
-    #intro-content h3 {
-        margin: 0 0 16px;
+    .step-container{
+        width: 100%;
     }
-
-    #intro-content p {
-        margin: 0;
+    #skills-container {
         text-align: center;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr;
+        grid-template-areas:"image"
+        "button"
+        "content";
     }
-
-    #icon-timeline {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        margin-bottom: 80px;
+    #skills-button-container{
+        width: 100vw;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 20px 0;
+        justify-self: center;
+        margin: 0 -16px;
     }
-
-    .diamond {
-        margin-bottom: -22px;
-    }
-
-    #parcours-first-step {
-        padding: 0 0 32px;
-        z-index: 6;
-    }
-
-    #parcours-second-step {
-        padding: 0 0 90px;
-        z-index: 6;
-    }
-
-    #parcours-helmo {
-        position: relative;
-        z-index: 6;
+    #portfolio-content{
+        padding-top: 30px;
         padding-bottom: 30px;
     }
+}
 
-    .border-waves-top {
-        position: relative;
+@media screen and (min-width: 600px) {
+    #picture-of-me{
+        width: 460px;
     }
-
-    .border-waves-top::after {
-        content: '';
-        width: 100%;
-        background-image: url("../../img/border-waves.svg");
-        background-repeat: repeat-x;
-        background-position: 0 0;
-        height: 20px;
-        border-bottom: solid 20px #CFC19F;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-
-    #parcours-relance, #parcours-now {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #parcours-relance img, #parcours-now img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-
-    #parcours-third-step, #parcours-fifth-step {
-        padding: 0 16px;
-        position: relative;
-    }
-
-    #relance-content, #now-content, #portfolio-content {
-        background-color: white;
-        clip-path: polygon(0 36px, 36px 0, calc(100% - 36px) 0, 100% 36px, 100% calc(100% - 36px), calc(100% - 36px) 100%, 36px 100%, 0 calc(100% - 36px));
-        padding: 24px;
-        margin: 8px 0;
-    }
-
-    .triforce-border {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .tri-force__corner {
-        position: absolute;
-    }
-
-    .tri-force__corner--tl {
-        top: 8px;
-        left: 16px;
-    }
-
-    .tri-force__corner--tr {
-        top: 8px;
-        right: 16px;
-    }
-
-    .tri-force__corner--br {
-        bottom: 8px;
-        right: 16px;
-    }
-
-    .tri-force__corner--bl {
-        bottom: 8px;
-        left: 16px;
-    }
-
-    #icon-timeline-third-step, #icon-timeline-fifth-step {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 3;
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .border-waves-bottom {
-        position: relative;
-    }
-
-    .border-waves-bottom::before {
-        content: '';
-        width: 100%;
-        background-image: url("../../img/border-waves.svg");
-        background-repeat: repeat-x;
-        background-position: 0 0;
-        height: 20px;
-        border-top: solid 20px #CFC19F;
-        position: absolute;
-        left: 0;
-    }
-
-    #parcours-hepl {
-        padding: 80px 16px 32px;
-    }
-
-    #parcours-portfolio {
-        position: relative;
-        background: url("../../img/parcours-portfolio-background.png") no-repeat center;
-        background-size: cover;
+    #profile-content{
         padding: 48px 8px;
-        margin: 0 auto;
     }
-
-    #portfolio-content {
-        position: relative;
+    .step-img{
+        width: 545px;
     }
-
-    #parcours-portfolio::before {
-        content: '';
-        width: 100%;
-        background-image: url("../../img/border-profile.svg");
-        background-position: 0 0;
-        height: 18px;
-        border-bottom: solid 0 #CFC19F;
-        background-repeat: repeat-x;
-        position: absolute;
-        left: 0;
-        top: 0;
+    #parcours-first-step, #parcours-fourth-step{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 12px;
+        margin: 0 20px 32px;
     }
-
-    #parcours-portfolio .triforce-border .tri-force__corner--tl {
-        top: 56px;
-        left: 16px;
+    #parcours-second-step, #parcours-fifth-step{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px 32px;
     }
-
-    #parcours-portfolio .triforce-border .tri-force__corner--tr {
-        top: 56px;
-        right: 16px;
+    #skills-container {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"image content"
+        "button button";
     }
-
-    #parcours-portfolio .triforce-border .tri-force__corner--bl {
-        bottom: 56px;
-        left: 16px;
+    #skills-info{
+        align-self: center;
     }
-
-    #parcours-portfolio .triforce-border .tri-force__corner--br {
-        bottom: 56px;
-        right: 16px;
+    #skills-logo{
+        margin-bottom: 64px;
     }
-
-    .pad--8 {
-        padding: 0 8px;
+    #footer-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #hepl-footer figure{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 }
