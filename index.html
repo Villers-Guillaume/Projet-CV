@@ -13,10 +13,10 @@
         <a href="#"><img src="./img/logo.png" alt="logo" id="logo-header"/></a>
         <button>Se connecter / S'enregistrer</button>
     </div>
+    <div id="motion-button">
+        <button><span id="motion">Réduire le mouvement</span></button>
+    </div>
     <div id="sticky-bar">
-        <div id="motion-button">
-            <button><span id="motion">Réduire le mouvement</span></button>
-        </div>
         <div id="menu-bar">
             <button id="menu">Menu</button>
             <a href="#"><img src="./img/logoHEPL2.jpg" alt="logo HEPL" id="logo-hepl-menu"/></a>
@@ -24,16 +24,34 @@
         <nav>
             <h2 class="hidden">Menu</h2>
             <ul>
-                <li>
-                    <a href="#" class="active">Accueil</a>
+                <li class="active">
+                    <a href="#" >Accueil</a>
+                    <svg class="hover-icon" width="11" height="8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5.5H.5l5.002 7z" fill-rule="evenodd"></path>
+                    </svg>
                     <svg class="active-icon" width="88" height="44" xmlns="http://www.w3.org/2000/svg">
                         <path d="M85.245 12.708C87.02 10.396 88 7.884 88 5.263c0-1.816-.465-3.578-1.346-5.263-3.536 7.934-18.558 14.08-37.252 15.09l-.673-.435-1.57-2.864 1.013-2.202-2.805.23-1.117-1.762-1.111 1.761-3.226-.229 1.432 2.202-1.57 2.864-.71.46C20.151 14.186 4.913 8 1.342 0 .47 1.685 0 3.447 0 5.263c0 2.375.807 4.664 2.296 6.8 2.456 1.824 6.132 3.05 11.667 2.653-3.093.59-5.762.977-8.07 1.214 1.924 1.621 4.264 3.106 6.955 4.41a37.63 37.63 0 008.127-2.678 33.352 33.352 0 01-5.173 3.992 60.952 60.952 0 007.153 2.365 46.768 46.768 0 004.043-4.095 34.921 34.921 0 01-1.924 4.618c1.982.463 4.045.85 6.177 1.154.374-1.4.72-2.892 1.042-4.482.141 1.582.149 3.133.044 4.641 1.846.246 3.74.433 5.676.56l-2.474 4.37c1.544.348 3.146.593 4.788.75l-1.085 2.83 1.425 1.902-.652 2.81-1.686 1.048-1.84 1.156-.135.597.594.143 1.842-1.154.95-.59-.252 1.088-.49 2.118.33.517.522-.324.49-2.116.25-1.09.592.952 1.152 1.836.6.139.142-.6-1.153-1.836-1.055-1.693.484-2.086 2.65 3.538 2.644-3.536.486 2.084-1.055 1.693-1.153 1.836.143.6.601-.14 1.148-1.835.593-.952.252 1.09.489 2.116.523.324.324-.517-.485-2.118-.251-1.088.945.59 1.846 1.154.594-.143-.135-.597-1.84-1.156-1.688-1.048-.648-2.81 1.423-1.902-1.083-2.83a38.491 38.491 0 004.786-.75l-2.478-4.379a86.683 86.683 0 006.712-.697 30.02 30.02 0 01-1.483-4.592 75.292 75.292 0 002.699 4.407 73.14 73.14 0 007.289-1.555 31.024 31.024 0 01-2.904-4.358 65.847 65.847 0 004.442 3.936 55.51 55.51 0 007.082-2.589 25 25 0 01-5.29-3.795 30.887 30.887 0 007.334 2.814c2.75-1.402 5.106-2.975 6.992-4.692-2.286.187-5.025.062-8.312-.57 4.844.345 8.266-.556 10.7-2.007"
                               fill-rule="evenodd"></path>
                     </svg>
                 </li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Activités</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                    <a href="#">Portfolio</a>
+                    <svg class="hover-icon" width="11" height="8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5.5H.5l5.002 7z" fill-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li>
+                    <a href="#">Activités</a>
+                    <svg class="hover-icon" width="11" height="8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5.5H.5l5.002 7z" fill-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                    <svg class="hover-icon" width="11" height="8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5.5H.5l5.002 7z" fill-rule="evenodd"></path>
+                    </svg>
+                </li>
             </ul>
         </nav>
     </div>
@@ -46,12 +64,12 @@
             </video>
         </div>
         <div id="profile-content">
-            <img src="./img/logo.png" alt="logo" class="logo">
+            <img src="./img/logo.png" alt="logo" class="logo transition-delay">
             <h2 id="profile-name">Guillaume Villers</h2>
             <p>Etudiant Web Developpeur</p>
         </div>
         <picture>
-            <img src="./img/pdp.png" alt="photo de moi" id="picture-of-me">
+            <img src="./img/pdp.png" alt="Jeune homme cheveux chataîn portant des lunettes" id="picture-of-me" class="transition-delay">
         </picture>
     </section>
 

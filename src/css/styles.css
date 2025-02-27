@@ -117,12 +117,15 @@ nav {
 nav li {
     text-align: center;
 }
-nav svg {
+.active-icon {
     position: absolute;
     left: 50%;
     transform: translateX(-50%) translateY(15%);
     fill: #B8A279;
     opacity: 0.3;
+}
+.hover-icon{
+    display: none;
 }
 
 nav::after {
@@ -191,7 +194,6 @@ nav a {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
     align-items: flex-end;
 }
 
@@ -220,6 +222,9 @@ nav a {
 }
 #profile {
     color: white;
+}
+#profile p{
+    margin-top: 0;
 }
 
 #parcours-first-step, #parcours-second-step, #parcours-thrid-step {
@@ -304,7 +309,16 @@ nav a {
 #parcours-helmo, #parcours-hepl, #parcours-now, #parcours-portfolio {
     color: rgb(61, 57, 50);
 }
-
+#parcours-first-step img, #parcours-second-step img,#parcours-fourth-step img,#parcours-fifth-step img {
+    flex-basis: 60%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+#parcours-first-step p, #parcours-second-step p,#parcours-fourth-step p,#parcours-fifth-step p {
+    flex-basis: 33.33%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
 #parcours-helmo p {
     margin: 0;
 }
@@ -489,7 +503,13 @@ p {
 #skills-logo {
     grid-area: image;
 }
-
+ul#skills-logo{
+    display: inline-block;
+    width: 100%;
+}
+#skills-container{
+    padding: 40px 24px 0;
+}
 #skills-button svg {
     width: 62px;
     height: 38px;
@@ -507,6 +527,10 @@ p {
 }
 #skills-info {
     grid-area: content;
+    margin: 0;
+}
+#skills-info h3{
+    margin-top: 0;
 }
 
 #skills-button-container {
@@ -517,7 +541,6 @@ p {
 #skills svg {
     fill: rgb(184, 162, 121);
 }
-
 #skills-logo img {
     width: 358px;
 }
@@ -737,6 +760,22 @@ footer figcaption{
 #copyright{
     font-size: 14px;
 }
+
+.transition-delay{
+    animation: fadeInAnimation ease 2s;
+    animation-delay: 0.5s;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @media screen and (max-width: 600px) {
     #profile {
         position: relative;
@@ -844,5 +883,84 @@ footer figcaption{
         justify-content: center;
         align-items: center;
         gap: 10px;
+    }
+}
+@media screen and (min-width: 1000px){
+    nav ul{
+        display: flex;
+    }
+    #sticky-bar{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        display: inline-block;
+        background: none;
+        position: absolute;
+        align-self: center;
+        top: -22px;
+    }
+    nav::after{
+        display: none;
+    }
+    #menu{
+        display: none;
+    }
+    #menu-bar{
+        flex-direction: row-reverse;
+    }
+    .active{
+        position: relative;
+    }
+    nav li{
+        position: relative;
+    }
+    .active-icon{
+        opacity: 1;
+        position: absolute;
+        top: 65%;
+    }
+    .hover-icon{
+        fill: #B8A279;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 45%;
+    }
+    li .hover-icon{
+        display: none;
+    }
+    .active .hover-icon{
+        display: block;
+    }
+    nav li:hover .hover-icon{
+        display: block;
+    }
+    #skills-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "button image content";
+        margin-bottom: 50px;
+
+    }
+    #skills-button li{
+        margin: 32px 0 0;
+    }
+    #skills-button{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        margin:0;
+        gap: 3vw;
+    }
+    #skills-logo{
+        position: relative;
+    }
+    #skills-logo li{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
     }
 }
