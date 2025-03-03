@@ -16,6 +16,41 @@
         transform: rotate(360deg);
     }
 }
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOpacity {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes filter {
+    from{
+        filter: grayscale(100%) sepia(60%);
+    }
+    to{
+        filter: none;
+    }
+}
 
 html, body {
     width: 100%;
@@ -33,14 +68,21 @@ body {
     flex-direction: column;
 }
 
-
+body p{
+    opacity: 0;
+}
 .hidden {
     position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
     height: 1px;
-    overflow: hidden;
+    width: 1px;
+    margin: -1px;
+    padding:0;
+    border:0;
+}
+.active {
+    display: block;
 }
 #login-bar {
     background-color: #e60012;
@@ -239,6 +281,24 @@ nav a {
     font-size: 40px;
     line-height: 44px;
     font-weight: 400;
+    margin: 20px 0 20px;
+}
+.title-span span {
+    margin-right: -8px;
+}
+.title-span span:last-of-type{
+    margin: 0;
+}
+span.space{
+    margin-right: 10px;
+}
+
+.title-fade{
+    opacity: 0;
+    animation: opacity forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: calc(var(--i)*0.04s);
 }
 
 #profile::after {
@@ -271,7 +331,9 @@ nav a {
 
 #circle {
     width: 300px;
-    animation: spin 40s linear infinite;
+    animation: spin 40s linear infinite, fadeOpacity 1s  ease-in-out forwards;
+    animation-delay: calc(var(--i)* 0.02s);
+    opacity: 0;
 }
 
 #intro-content {
@@ -300,6 +362,9 @@ nav a {
 
 .diamond {
     margin-bottom: -22px;
+}
+.step-img{
+
 }
 
 #parcours-first-step {
@@ -481,10 +546,24 @@ p {
     white-space: nowrap;
     margin: 0 calc(50vw - 42px);
 }
+#skills-button button:not(.active) {
+    outline: 1px solid transparent;
+    outline-offset: 0;
+    transition: outline-offset 0.2s ease-in-out, outline-color 0.2s ease-in-out;
+}
+
+#skills-button button:not(.active):hover {
+    animation: filter forwards;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    outline-color: #B8A279;
+    outline-offset: 5px;
+}
 
 #skills-button button.active {
     outline: 1px solid #B8A279;
     outline-offset: 5px;
+    filter: none;
 }
 
 #skills-button button {
@@ -499,6 +578,9 @@ p {
     margin-right: 24px;
     width: 94px;
 }
+#skills-button * button{
+    filter: grayscale(100%) sepia(60%);
+}
 
 #skills-logo {
     grid-area: image;
@@ -506,6 +588,9 @@ p {
 ul#skills-logo{
     display: inline-block;
     width: 100%;
+}
+#skills-logo li:not(.active), #skills-info li:not(.active) {
+    display: none;
 }
 #skills-container{
     padding: 40px 24px 0;
@@ -762,20 +847,11 @@ footer figcaption{
 }
 
 .transition-delay{
-    animation: fadeInAnimation ease 2s;
-    animation-delay: 0.5s;
+    opacity: 0;
+    animation: fadeInAnimation ease 2s forwards;
+    animation-delay: calc(var(--i)*0.5s);
 }
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 @media screen and (max-width: 600px) {
     #profile {
         position: relative;
@@ -963,4 +1039,31 @@ footer figcaption{
         left: 50%;
         transform: translate(-50%, -40%);
     }
+}
+
+@property --radius {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --gradient-length {
+    syntax: "<length> | <percentage>";
+    inherits: false;
+    initial-value: 0px;
+}
+
+.step-img {
+    --radius: 0%;
+    --gradient-length: -120px;
+    --time: 3s;
+
+    mask-image: radial-gradient(
+            black calc(var(--radius) + var(--gradient-length)),
+            black,
+            transparent var(--radius),
+            transparent
+    );
+    transition: --radius var(--time) cubic-bezier(0, 0.55, 0.45, 1),
+    --gradient-length var(--time) ease-out;
 }

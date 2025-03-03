@@ -5,6 +5,8 @@
     <title>Guillaume Villers - CV</title>
     <link rel="stylesheet" href="./src/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <script type="module" defer src="./src/js/main.js"></script>
 </head>
 <body>
 <h1 class="hidden">Mon CV</h1>
@@ -64,21 +66,56 @@
             </video>
         </div>
         <div id="profile-content">
-            <img src="./img/logo.png" alt="logo" class="logo transition-delay">
-            <h2 id="profile-name">Guillaume Villers</h2>
-            <p>Etudiant Web Developpeur</p>
+            <img src="./img/logo.png" alt="logo" class="logo transition-delay" style="--i:1.5">
+           <h2 id="profile-name">
+               <span class="title-span">
+                   <span class="title-fade" style="--i : 3">G</span>
+                   <span class="title-fade" style="--i : 10">u</span>
+                   <span class="title-fade" style="--i : 20">i</span>
+                   <span class="title-fade" style="--i : 4">l</span>
+                   <span class="title-fade" style="--i : 8">l</span>
+                   <span class="title-fade" style="--i : 15">a</span>
+                   <span class="title-fade" style="--i : 9">u</span>
+                   <span class="title-fade" style="--i : 1">m</span>
+                   <span class="title-fade" style="--i : 17">e</span>
+                   <span class="space"></span>
+                   <span class="title-fade" style="--i : 19">V</span>
+                   <span class="title-fade" style="--i : 5">i</span>
+                   <span class="title-fade" style="--i : 6">l</span>
+                   <span class="title-fade" style="--i : 26">l</span>
+                   <span class="title-fade" style="--i : 2">e</span>
+                   <span class="title-fade" style="--i : 14">r</span>
+                   <span class="title-fade" style="--i : 10">s</span>
+               </span>
+           </h2>
+            <p class="transition-delay" style="--i:2">Etudiant Web Developpeur</p>
         </div>
         <picture>
-            <img src="./img/pdp.png" alt="Jeune homme cheveux chataîn portant des lunettes" id="picture-of-me" class="transition-delay">
+            <img src="./img/pdp.png" alt="Jeune homme cheveux chataîn portant des lunettes" id="picture-of-me" class="transition-delay" style="--i:0.5">
         </picture>
     </section>
 
     <section id="parcours-helmo">
         <div id="parcours-intro">
-            <img src="/img/icon-ornate-circle.svg" alt="cercle" id="circle">
+            <img src="/img/icon-ornate-circle.svg" alt="cercle" id="circle" style="--i:20">
             <div id="intro-content">
-                <h3>Mon parcours</h3>
-                <p>J'ai obtenu mon CESS en 2020 au DIC collège à Liège</p>
+                <h3>
+                    <span id="parcours-title" class="title-span">
+                        <span style="--i:3">M</span>
+                        <span style="--i:10">o</span>
+                        <span style="--i:8">n</span>
+                        <span class="space"></span>
+                        <span style="--i:15">p</span>
+                        <span style="--i:23">a</span>
+                        <span style="--i:5">r</span>
+                        <span style="--i:17">c</span>
+                        <span style="--i:4">o</span>
+                        <span style="--i:8">u</span>
+                        <span style="--i:2">r</span>
+                        <span style="--i:12">s</span>
+                    </span>
+                </h3>
+                <p class="p-fade" style="--i:3">J'ai obtenu mon CESS en 2020 au DIC collège à Liège</p>
             </div>
         </div>
         <div id="icon-timeline">
@@ -91,7 +128,7 @@
         <div id="parcours-first-step">
             <img src="./img/first-step-info-gestion.png" alt="Image d'un pc avec des visuels de liens et connexions"
                  class="step-img">
-            <p>
+            <p class="p-fade">
                 Septembre 2020, j'ai commencé par faire des études en informatique de gestion à l'Helmo,
                 malheureusement, c'était en plein COVID, donc tous les cours en distanciel.
                 Je n'ai pas réussi à me motiver à suivre les cours.
@@ -104,7 +141,7 @@
         </svg>
         <div id="parcours-second-step">
             <img src="./img/second-step-info-gestion.png" alt="image info gestion" class="step-img">
-            <p>
+            <p class="p-fade">
                 Septembre 2021, j'ai retenté l'Helmo, parce que je mettais le COVID comme raison de mon abandon pour la
                 première année. Sauf que ce n'était pas le COVID mais bien le bachelier.
                 J'ai décidé alors d'arrêter après les examens de janvier 2022.
@@ -143,7 +180,7 @@
                     </svg>
                 </div>
                 <div id="relance-content">
-                    <p>
+                    <p class="p-fade">
                         Mars 2022, je décide de participer à un programme de réorientation, appelé "Relance". Qui permet
                         de
                         découvrir pleins de métiers et les différentes possibilités pour trouver sa voie.
@@ -157,7 +194,7 @@
         <h3 class="hidden">Parcours Hepl, première partie</h3>
         <div id="parcours-fourth-step">
             <img src="./img/third-step-relance.png" alt="Relance" class="step-img">
-            <p>
+            <p class="p-fade">
                 Septembre 2022, grâce à Relance et des recherches, je me lance dans le bachelier en techniques graphique
                 à HEPL
             </p>
@@ -169,7 +206,7 @@
         </svg>
         <div id="parcours-fifth-step">
             <img src="./img/third-step-hepl3D.png" alt="projet 3D" class="step-img">
-            <p>
+            <p class="p-fade">
                 Septembre 2023, pour ma deuxième année, on a un choix d'option, je me suis dirigé en 3D/vidéo
             </p>
         </div>
@@ -206,7 +243,7 @@
                     </svg>
                 </div>
                 <div id="now-content">
-                    <p>
+                    <p class="p-fade">
                         Aujourd'hui, je suis toujours en 2ème année mais cette fois j'ai changé d'option, je suis
                         maintenant
                         en
@@ -219,8 +256,26 @@
     <div class="border-waves-bottom"></div>
     <section id="skills">
         <div id="skills-intro">
-            <h2>Mes compétences</h2>
-            <p>
+            <h2>
+                <span class="title-span">
+                    <span style="--i:3">M</span>
+                    <span style="--i:10">e</span>
+                    <span style="--i:20">s</span>
+                    <span class="space"></span>
+                    <span style="--i:4">c</span>
+                    <span style="--i:8">o</span>
+                    <span style="--i:15">m</span>
+                    <span style="--i:3">p</span>
+                    <span style="--i:9">é</span>
+                    <span style="--i:1">t</span>
+                    <span style="--i:17">e</span>
+                    <span style="--i:19">n</span>
+                    <span style="--i:5">c</span>
+                    <span style="--i:26">e</span>
+                    <span style="--i:6">s</span>
+                </span>
+            </h2>
+            <p class="p-fade">
                 Listes de mes compétences acquises durant mes expériences.
             </p>
         </div>
@@ -228,8 +283,8 @@
         <div id="skills-container">
             <div id="skills-button-container">
                 <ul id="skills-button">
-                    <li id="html">
-                        <button class="active">
+                    <li >
+                        <button class="html active">
                             <img src="./img/skills/html-logo-select.jpg" alt="logo html">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
                                  viewBox="0 0 62 38">
@@ -238,9 +293,9 @@
                             </svg>
                         </button>
                     </li>
-                    <li id="css">
-                        <button>
-                            <img src="./img/skills/css-logo-not-select.jpg" alt="logo css">
+                    <li >
+                        <button class="css">
+                            <img src="./img/skills/css-logo-select.jpg" alt="logo css">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
                                  viewBox="0 0 62 38">
                                 <path d="m29.6627446 41.6644327c-.0461696-.1278502-.111779-.2483245-.1579486-.3687988-.8116127-1.8120316-1.4239672-3.8748463-1.7690242-6.0237142l10.2642282-4.4059166-10.2180586-4.3739541c.3547769-2.0775667.9404016-4.0395765 1.7228546-5.7999762.0461696-.1130983.1069191-.2286553.1579486-.3466709 1.0789103-2.3357259 2.5077376-4.3223222 4.1819926-5.8147281l-4.4031206-6.05813543-6.1211153-8.47253837c-1.9099629 1.6546774-3.6498273 3.53801007-5.2195933 5.65983265l6.3325234 8.70611095c-.451976.727763-.8723622 1.4924059-1.2611587 2.2545902l-8.7090421-4.8681445c-1.0910602 2.2472141-1.9828623 4.6444065-2.677836 7.1620732l8.8864304 4.9591148c-.1943982.8875759-.3426269 1.794821-.4641258 2.6922315l-20.2076992 4.3001943 20.1688195 4.3001943c.1312189.9908395.2794475 1.989055.5030055 2.9528493l-8.8791405 4.9689495c.6876838 2.5324186 1.5867758 4.9099417 2.6705461 7.1546972l8.7090421-4.8533925c.3887965.7793948.8091827 1.5342031 1.2611587 2.2398382l-6.3179435 8.7233215c1.5551861 2.1095293 3.2950505 3.985486 5.2050134 5.6475394l6.1211153-8.4602451 4.4031206-6.06797c-1.6669651-1.4924059-3.1030823-3.4765436-4.1819926-5.8073522"
@@ -248,9 +303,9 @@
                             </svg>
                         </button>
                     </li>
-                    <li id="js">
-                        <button>
-                            <img src="./img/skills/js-logo-not-select.jpg" alt="logo javascript">
+                    <li>
+                        <button class="js">
+                            <img src="./img/skills/js-logo-select.jpg" alt="logo javascript">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
                                  viewBox="0 0 62 38">
                                 <path d="m29.6627446 41.6644327c-.0461696-.1278502-.111779-.2483245-.1579486-.3687988-.8116127-1.8120316-1.4239672-3.8748463-1.7690242-6.0237142l10.2642282-4.4059166-10.2180586-4.3739541c.3547769-2.0775667.9404016-4.0395765 1.7228546-5.7999762.0461696-.1130983.1069191-.2286553.1579486-.3466709 1.0789103-2.3357259 2.5077376-4.3223222 4.1819926-5.8147281l-4.4031206-6.05813543-6.1211153-8.47253837c-1.9099629 1.6546774-3.6498273 3.53801007-5.2195933 5.65983265l6.3325234 8.70611095c-.451976.727763-.8723622 1.4924059-1.2611587 2.2545902l-8.7090421-4.8681445c-1.0910602 2.2472141-1.9828623 4.6444065-2.677836 7.1620732l8.8864304 4.9591148c-.1943982.8875759-.3426269 1.794821-.4641258 2.6922315l-20.2076992 4.3001943 20.1688195 4.3001943c.1312189.9908395.2794475 1.989055.5030055 2.9528493l-8.8791405 4.9689495c.6876838 2.5324186 1.5867758 4.9099417 2.6705461 7.1546972l8.7090421-4.8533925c.3887965.7793948.8091827 1.5342031 1.2611587 2.2398382l-6.3179435 8.7233215c1.5551861 2.1095293 3.2950505 3.985486 5.2050134 5.6475394l6.1211153-8.4602451 4.4031206-6.06797c-1.6669651-1.4924059-3.1030823-3.4765436-4.1819926-5.8073522"
@@ -258,9 +313,9 @@
                             </svg>
                         </button>
                     </li>
-                    <li id="premiere-pro">
-                        <button>
-                            <img src="./img/skills/premierePro-logo-not-select.jpg" alt="logo premiere pro">
+                    <li>
+                        <button class="premiere-pro">
+                            <img src="./img/skills/premierePro-logo-select.jpg" alt="logo premiere pro">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
                                  viewBox="0 0 62 38">
                                 <path d="m29.6627446 41.6644327c-.0461696-.1278502-.111779-.2483245-.1579486-.3687988-.8116127-1.8120316-1.4239672-3.8748463-1.7690242-6.0237142l10.2642282-4.4059166-10.2180586-4.3739541c.3547769-2.0775667.9404016-4.0395765 1.7228546-5.7999762.0461696-.1130983.1069191-.2286553.1579486-.3466709 1.0789103-2.3357259 2.5077376-4.3223222 4.1819926-5.8147281l-4.4031206-6.05813543-6.1211153-8.47253837c-1.9099629 1.6546774-3.6498273 3.53801007-5.2195933 5.65983265l6.3325234 8.70611095c-.451976.727763-.8723622 1.4924059-1.2611587 2.2545902l-8.7090421-4.8681445c-1.0910602 2.2472141-1.9828623 4.6444065-2.677836 7.1620732l8.8864304 4.9591148c-.1943982.8875759-.3426269 1.794821-.4641258 2.6922315l-20.2076992 4.3001943 20.1688195 4.3001943c.1312189.9908395.2794475 1.989055.5030055 2.9528493l-8.8791405 4.9689495c.6876838 2.5324186 1.5867758 4.9099417 2.6705461 7.1546972l8.7090421-4.8533925c.3887965.7793948.8091827 1.5342031 1.2611587 2.2398382l-6.3179435 8.7233215c1.5551861 2.1095293 3.2950505 3.985486 5.2050134 5.6475394l6.1211153-8.4602451 4.4031206-6.06797c-1.6669651-1.4924059-3.1030823-3.4765436-4.1819926-5.8073522"
@@ -268,9 +323,9 @@
                             </svg>
                         </button>
                     </li>
-                    <li id="after-effect">
-                        <button>
-                            <img src="./img/skills/afterEffect-logo-not-select.jpg" alt="logo after effect">
+                    <li>
+                        <button class="after-effect">
+                            <img src="./img/skills/afterEffect-logo-select.jpg" alt="logo after effect">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
                                  viewBox="0 0 62 38">
                                 <path d="m29.6627446 41.6644327c-.0461696-.1278502-.111779-.2483245-.1579486-.3687988-.8116127-1.8120316-1.4239672-3.8748463-1.7690242-6.0237142l10.2642282-4.4059166-10.2180586-4.3739541c.3547769-2.0775667.9404016-4.0395765 1.7228546-5.7999762.0461696-.1130983.1069191-.2286553.1579486-.3466709 1.0789103-2.3357259 2.5077376-4.3223222 4.1819926-5.8147281l-4.4031206-6.05813543-6.1211153-8.47253837c-1.9099629 1.6546774-3.6498273 3.53801007-5.2195933 5.65983265l6.3325234 8.70611095c-.451976.727763-.8723622 1.4924059-1.2611587 2.2545902l-8.7090421-4.8681445c-1.0910602 2.2472141-1.9828623 4.6444065-2.677836 7.1620732l8.8864304 4.9591148c-.1943982.8875759-.3426269 1.794821-.4641258 2.6922315l-20.2076992 4.3001943 20.1688195 4.3001943c.1312189.9908395.2794475 1.989055.5030055 2.9528493l-8.8791405 4.9689495c.6876838 2.5324186 1.5867758 4.9099417 2.6705461 7.1546972l8.7090421-4.8533925c.3887965.7793948.8091827 1.5342031 1.2611587 2.2398382l-6.3179435 8.7233215c1.5551861 2.1095293 3.2950505 3.985486 5.2050134 5.6475394l6.1211153-8.4602451 4.4031206-6.06797c-1.6669651-1.4924059-3.1030823-3.4765436-4.1819926-5.8073522"
@@ -278,9 +333,9 @@
                             </svg>
                         </button>
                     </li>
-                    <li id="photoshop">
-                        <button>
-                            <img src="./img/skills/photoshop-logo-not-select.jpg" alt="logo photoshop">
+                    <li>
+                        <button class="photoshop">
+                            <img src="./img/skills/photoshop-logo-select.jpg" alt="logo photoshop">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
                                  viewBox="0 0 62 38">
                                 <path d="m29.6627446 41.6644327c-.0461696-.1278502-.111779-.2483245-.1579486-.3687988-.8116127-1.8120316-1.4239672-3.8748463-1.7690242-6.0237142l10.2642282-4.4059166-10.2180586-4.3739541c.3547769-2.0775667.9404016-4.0395765 1.7228546-5.7999762.0461696-.1130983.1069191-.2286553.1579486-.3466709 1.0789103-2.3357259 2.5077376-4.3223222 4.1819926-5.8147281l-4.4031206-6.05813543-6.1211153-8.47253837c-1.9099629 1.6546774-3.6498273 3.53801007-5.2195933 5.65983265l6.3325234 8.70611095c-.451976.727763-.8723622 1.4924059-1.2611587 2.2545902l-8.7090421-4.8681445c-1.0910602 2.2472141-1.9828623 4.6444065-2.677836 7.1620732l8.8864304 4.9591148c-.1943982.8875759-.3426269 1.794821-.4641258 2.6922315l-20.2076992 4.3001943 20.1688195 4.3001943c.1312189.9908395.2794475 1.989055.5030055 2.9528493l-8.8791405 4.9689495c.6876838 2.5324186 1.5867758 4.9099417 2.6705461 7.1546972l8.7090421-4.8533925c.3887965.7793948.8091827 1.5342031 1.2611587 2.2398382l-6.3179435 8.7233215c1.5551861 2.1095293 3.2950505 3.985486 5.2050134 5.6475394l6.1211153-8.4602451 4.4031206-6.06797c-1.6669651-1.4924059-3.1030823-3.4765436-4.1819926-5.8073522"
@@ -291,27 +346,27 @@
                 </ul>
             </div>
             <ul id="skills-logo">
-                <li id="html-button" class="skill-logo-li active">
+                <li class="skill-logo-li html active">
                     <img src="./img/skills/html-logo-Full.png" alt="Logo HTML">
                 </li>
-                <li id="css-button" class="skill-logo-li hidden">
+                <li class="skill-logo-li css">
                     <img src="./img/skills/css-logo-Full.png" alt="Logo CSS">
                 </li>
-                <li id="javascript-button" class="skill-logo-li hidden">
+                <li class="skill-logo-li js">
                     <img src="./img/skills/js-logo-Full.png" alt="Logo JavaScript">
                 </li>
-                <li id="premiere-pro-button" class="skill-logo-li hidden">
+                <li class="skill-logo-li premiere-pro">
                     <img src="./img/skills/premierePro-logo-Full.png" alt="Logo Premiere Pro">
                 </li>
-                <li id="after-effect-button" class="skill-logo-li hidden">
+                <li class="skill-logo-li after-effect">
                     <img src="./img/skills/afterEffect-logo-Full.png" alt="Logo After Effect">
                 </li>
-                <li id="photoshop-button" class="skill-logo-li hidden">
+                <li class="skill-logo-li photoshop">
                     <img src="./img/skills/photoshop-logo-Full.png" alt="Logo Photoshop">
                 </li>
             </ul>
             <ul id="skills-info">
-                <li>
+                <li class="html active">
                     <h3>HTML</h3>
                     <svg class="icon icon--swirl" aria-hidden="true" viewBox="0 0 37 19">
                         <path d="M27.219.13L10.715 15.15l-5.684-4.007L6.47 8.395l2.472.465-.106 2.316 3.099.137.224-4.995-8.353-2.104L0 12.397l10.043 6.267L26.115 5.398l5.281 4.446-3.408 3.368-1.47-1.57 1.558-1.408-2.086-2.3-4.545 4.655 6.452 5.07 8.929-6.813z"></path>
@@ -320,7 +375,7 @@
                         Maitrise avancée de HTML
                     </p>
                 </li>
-                <li class="hidden">
+                <li class="css">
                     <h3>CSS</h3>
                     <svg class="icon icon--swirl" aria-hidden="true" viewBox="0 0 37 19">
                         <path d="M27.219.13L10.715 15.15l-5.684-4.007L6.47 8.395l2.472.465-.106 2.316 3.099.137.224-4.995-8.353-2.104L0 12.397l10.043 6.267L26.115 5.398l5.281 4.446-3.408 3.368-1.47-1.57 1.558-1.408-2.086-2.3-4.545 4.655 6.452 5.07 8.929-6.813z"></path>
@@ -329,7 +384,7 @@
                         Maitrise avancée de CSS
                     </p>
                 </li>
-                <li class="hidden">
+                <li class="js">
                     <h3>Java Script</h3>
                     <svg class="icon icon--swirl" aria-hidden="true" viewBox="0 0 37 19">
                         <path d="M27.219.13L10.715 15.15l-5.684-4.007L6.47 8.395l2.472.465-.106 2.316 3.099.137.224-4.995-8.353-2.104L0 12.397l10.043 6.267L26.115 5.398l5.281 4.446-3.408 3.368-1.47-1.57 1.558-1.408-2.086-2.3-4.545 4.655 6.452 5.07 8.929-6.813z"></path>
@@ -338,7 +393,7 @@
                         Bonne maitrise de Java Script
                     </p>
                 </li>
-                <li class="hidden">
+                <li class="premiere-pro">
                     <h3>Adobe Premiere Pro</h3>
                     <svg class="icon icon--swirl" aria-hidden="true" viewBox="0 0 37 19">
                         <path d="M27.219.13L10.715 15.15l-5.684-4.007L6.47 8.395l2.472.465-.106 2.316 3.099.137.224-4.995-8.353-2.104L0 12.397l10.043 6.267L26.115 5.398l5.281 4.446-3.408 3.368-1.47-1.57 1.558-1.408-2.086-2.3-4.545 4.655 6.452 5.07 8.929-6.813z"></path>
@@ -347,7 +402,7 @@
                         Maitrise avancée de Adobe Premiere Pro
                     </p>
                 </li>
-                <li class="hidden">
+                <li class="after-effect">
                     <h3>Adobe After effect</h3>
                     <svg class="icon icon--swirl" aria-hidden="true" viewBox="0 0 37 19">
                         <path d="M27.219.13L10.715 15.15l-5.684-4.007L6.47 8.395l2.472.465-.106 2.316 3.099.137.224-4.995-8.353-2.104L0 12.397l10.043 6.267L26.115 5.398l5.281 4.446-3.408 3.368-1.47-1.57 1.558-1.408-2.086-2.3-4.545 4.655 6.452 5.07 8.929-6.813z"></path>
@@ -356,7 +411,7 @@
                         Maitrise avancée de Adobe After Effect
                     </p>
                 </li>
-                <li class="hidden">
+                <li class="photoshop">
                     <h3>Adobe Photoshop</h3>
                     <svg class="icon icon--swirl" aria-hidden="true" viewBox="0 0 37 19">
                         <path d="M27.219.13L10.715 15.15l-5.684-4.007L6.47 8.395l2.472.465-.106 2.316 3.099.137.224-4.995-8.353-2.104L0 12.397l10.043 6.267L26.115 5.398l5.281 4.446-3.408 3.368-1.47-1.57 1.558-1.408-2.086-2.3-4.545 4.655 6.452 5.07 8.929-6.813z"></path>
