@@ -1,7 +1,10 @@
 import {settings as s} from "./settings.js";
 
 //Constantes
+const motionButtonElement = document.getElementById(s.idMotion);
+const noMotionElement = document.getElementById(s.idNoMotion);
 const menuButtonElement = document.getElementById(s.idMenuButton);
+const navElement = document.querySelector("nav");
 const spanTitles = document.querySelectorAll(s.classTitleSpan);
 const circleElement = document.getElementById(s.idCercle);
 const stepImgs = document.querySelectorAll(s.classStepImg);
@@ -87,7 +90,19 @@ function getSkillsButton() {
     }
     return allButtons;
 }
+function motion() {
+    [motionButtonElement,noMotionElement].forEach(motionElement =>{
+        motionElement.addEventListener('click',()=>{
+            noMotionElement.classList.toggle(s.classHidden);
+        })
+    })
 
+}
+function activateMenu() {
+    menuButtonElement.addEventListener('click',()=>{
+        navElement.classList.toggle('hidden');
+    })
+}
 function handleClickSkills() {
     const liSkillLogos = Array.from(ulSkillLogos.children);
     const liSkillInfos = Array.from(ulSkillInfos.children);
@@ -119,4 +134,6 @@ observer.observe(circleElement);
 observerTitle();
 observeStepImg();
 observePElement();
-handleClickSkills()
+motion();
+activateMenu()
+handleClickSkills();

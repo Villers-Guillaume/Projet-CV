@@ -1,4 +1,6 @@
 export const settings = {
+    idNoMotion:'no-motion',
+    idMotion:'motion',
     idMenuButton:'menu',
     idCercle:'circle',
     idSkillsButton:'skills-button',
@@ -13,5 +15,7 @@ export const settings = {
     classActive:'active',
     classHidden:'hidden',
     classSkillLogoUl:'skills-logo',
-    classSkillInfoUl:'skills-info'
+    classSkillInfoUl:'skills-info',
+    classChecked:'checked',
+
 }

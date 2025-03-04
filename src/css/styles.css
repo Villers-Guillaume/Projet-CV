@@ -120,6 +120,12 @@ button {
     height: 32px;
     background-color: black;
 }
+#motion-button button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
 #menu {
     font-family: "Lora", serif;
@@ -127,8 +133,12 @@ button {
     background-color: rgb(17, 25, 33);
     border: 1px solid #B8A279;
     color: white;
-    padding: 10px;
+    padding: 15px;
     margin-left: 20px;
+    cursor:pointer;
+}
+#menu:hover{
+    border: 1px solid white;
 }
 
 #logo-hepl-menu {
@@ -144,11 +154,28 @@ header span {
 
 #motion::before {
     content: '';
-    padding: 0 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
     border: 2px solid #B8A279;
     border-radius: 50%;
     background-color: white;
     margin-right: 10px;
+}
+#motion{
+    display: flex;
+    align-items: center;
+
+}
+#no-motion{
+    background-color: #003DA0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #003DA0;
+    border-radius: 50%;
+    position: absolute;
+    left: 8px;
 }
 nav {
     display: flex;
@@ -639,6 +666,7 @@ ul#skills-logo{
 
 #skills-info p {
     margin: 0;
+    opacity: 1;
 }
 
 #skills-info h3 {
@@ -906,6 +934,7 @@ footer figcaption{
         justify-self: center;
         margin: 0 -16px;
     }
+
     #portfolio-content{
         padding-top: 30px;
         padding-bottom: 30px;
