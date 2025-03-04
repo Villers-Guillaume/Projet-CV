@@ -5,6 +5,7 @@ const motionButtonElement = document.getElementById(s.idMotion);
 const noMotionElement = document.getElementById(s.idNoMotion);
 const menuButtonElement = document.getElementById(s.idMenuButton);
 const navElement = document.querySelector("nav");
+const videoElement = document.getElementById(s.idVideo);
 const spanTitles = document.querySelectorAll(s.classTitleSpan);
 const circleElement = document.getElementById(s.idCercle);
 const stepImgs = document.querySelectorAll(s.classStepImg);
@@ -90,13 +91,49 @@ function getSkillsButton() {
     }
     return allButtons;
 }
-function motion() {
-    [motionButtonElement,noMotionElement].forEach(motionElement =>{
-        motionElement.addEventListener('click',()=>{
-            noMotionElement.classList.toggle(s.classHidden);
-        })
-    })
+function disableAnimationsAndTransitions() {
+    // Appliquer des styles pour désactiver les animations et transitions
+    const elementStopAnim = [...stepImgs,...pElements,...spanTitles,circleElement];
 
+    elementStopAnim.forEach((element) => {
+        // Désactiver les animations et transitions
+        element.style.animation = 'none';
+        element.style.transition = 'none';
+
+        // Forcer les éléments dans leur état final (par exemple, opacité à 1, etc.)
+        if (element.style.opacity === '') {
+            element.style.opacity = '1';
+        }
+
+        if (element.style.transform === '') {
+            element.style.transform = 'none';
+        }
+    });
+}
+function checkVideoState() {
+    if (!noMotionElement.classList.contains(s.classHidden)) {
+        videoElement.pause();
+        videoElement.removeAttribute("autoplay");
+        disableAnimationsAndTransitions();
+    } else {
+        videoElement.play();
+    }
+}
+function navHiddenMobileAndTablet() {
+    if (window.innerWidth < 1000) {
+        navElement.classList.add(s.classHidden);
+    }
+}
+function motion() {
+    motionButtonElement.addEventListener('click', () => {
+        noMotionElement.classList.toggle(s.classHidden);
+        checkVideoState();
+    });
+
+    noMotionElement.addEventListener('click', () => {
+        noMotionElement.classList.toggle(s.classHidden);
+        checkVideoState();
+    });
 }
 function activateMenu() {
     menuButtonElement.addEventListener('click',()=>{
@@ -131,6 +168,7 @@ function handleClickSkills() {
 //Instructions
 
 observer.observe(circleElement);
+navHiddenMobileAndTablet();
 observerTitle();
 observeStepImg();
 observePElement();

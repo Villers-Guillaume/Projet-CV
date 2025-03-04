@@ -2,6 +2,7 @@ export const settings = {
     idNoMotion:'no-motion',
     idMotion:'motion',
     idMenuButton:'menu',
+    idVideo:'video-profile',
     idCercle:'circle',
     idSkillsButton:'skills-button',
     classTitleFade:'title-fade',

@@ -51,6 +51,37 @@
         filter: none;
     }
 }
+@property --radius {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --gradient-length {
+    syntax: "<length> | <percentage>";
+    inherits: false;
+    initial-value: 0px;
+}
+
+.step-img {
+    --radius: 0%;
+    --gradient-length: -120px;
+    --time: 3s;
+
+    mask-image: radial-gradient(
+            black calc(var(--radius) + var(--gradient-length)),
+            black,
+            transparent var(--radius),
+            transparent
+    );
+    transition: --radius var(--time) cubic-bezier(0, 0.55, 0.45, 1),
+    --gradient-length var(--time) ease-out;
+}
+
+.no-motion *{
+    animation: none;
+    transition: none;
+}
 
 html, body {
     width: 100%;
@@ -71,7 +102,7 @@ body {
 body p{
     opacity: 0;
 }
-.hidden {
+.hidden{
     position: absolute;
     overflow:hidden;
     clip:rect(0 0 0 0);
@@ -236,7 +267,6 @@ nav a {
     align-items: center;
     padding-bottom: 2px;
 }
-
 #menu-bar, nav {
     background: url("../../img/noise-background.png") center center, #3D3932;
     background-size: 150px 150px;
@@ -881,6 +911,9 @@ footer figcaption{
 }
 
 @media screen and (max-width: 600px) {
+    nav{
+        display: none;
+    }
     #profile {
         position: relative;
         display: flex;
@@ -938,6 +971,9 @@ footer figcaption{
     #portfolio-content{
         padding-top: 30px;
         padding-bottom: 30px;
+    }
+    nav.hidden{
+        display: none;
     }
 }
 
@@ -1070,29 +1106,4 @@ footer figcaption{
     }
 }
 
-@property --radius {
-    syntax: "<percentage>";
-    inherits: false;
-    initial-value: 0%;
-}
 
-@property --gradient-length {
-    syntax: "<length> | <percentage>";
-    inherits: false;
-    initial-value: 0px;
-}
-
-.step-img {
-    --radius: 0%;
-    --gradient-length: -120px;
-    --time: 3s;
-
-    mask-image: radial-gradient(
-            black calc(var(--radius) + var(--gradient-length)),
-            black,
-            transparent var(--radius),
-            transparent
-    );
-    transition: --radius var(--time) cubic-bezier(0, 0.55, 0.45, 1),
-    --gradient-length var(--time) ease-out;
-}
