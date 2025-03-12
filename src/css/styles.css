@@ -64,6 +64,7 @@
 }
 
 .step-img {
+    z-index: 10;
     --radius: 0%;
     --gradient-length: -120px;
     --time: 3s;
@@ -115,24 +116,22 @@ body p{
 .active {
     display: block;
 }
-#login-bar {
+#top-bar {
     background-color: #e60012;
     height: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 0;
 }
 
-#login-bar a {
+#top-bar a {
     display: block;
 }
 #logo-header {
     display: block;
-    width: 42px;
+    width: 97px;
     margin-left: 30px;
-}
-#login-bar button{
-    margin-right: 30px;
 }
 button {
     border-style: none;
@@ -150,6 +149,7 @@ button {
     align-items: center;
     height: 32px;
     background-color: black;
+    z-index: 10;
 }
 #motion-button button{
     cursor: pointer;
@@ -209,11 +209,11 @@ header span {
     left: 8px;
 }
 nav {
-    display: flex;
-    justify-content: center;
-    padding: 13px;
+    display: none;
 }
-
+#menu{
+    display: none;
+}
 nav li {
     text-align: center;
 }
@@ -227,7 +227,9 @@ nav li {
 .hover-icon{
     display: none;
 }
-
+nav{
+    position: relative;
+}
 nav::after {
     content: '';
     position: absolute;
@@ -236,7 +238,7 @@ nav::after {
     background-position: 0 0;
     width: 100%;
     height: 2px;
-    top: 400px;
+    bottom: 0px;
 }
 
 nav ul {
@@ -290,10 +292,12 @@ nav a {
     top: -1px;
 }
 #profile {
-    position: relative;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
+    position: relative;
+    padding-top: 30px;
+    color: white;
 }
 
 #video-container {
@@ -312,21 +316,23 @@ nav a {
     object-fit: cover;
 }
 
+.span-word{
+    display: inline-block;
+}
+
 #profile-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     padding: 0 8px;
-}
-#profile {
-    color: white;
+    align-self: flex-start;
 }
 #profile p{
     margin-top: 0;
 }
 
-#parcours-first-step, #parcours-second-step, #parcours-thrid-step {
+#parcours-first-step, #parcours-second-step, #parcours-third-step {
     color: #3D3932;
 }
 
@@ -369,6 +375,19 @@ span.space{
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+#parcours-first-step,#parcours-fourth-step{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#parcours-second-step,#parcours-fifth-step{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
 }
 #parcours-helmo {
     padding: 0 8px;
@@ -420,26 +439,12 @@ span.space{
 .diamond {
     margin-bottom: -22px;
 }
-.step-img{
-
-}
-
 #parcours-first-step {
     padding: 0 0 32px;
     z-index: 6;
 }
 #parcours-helmo, #parcours-hepl, #parcours-now, #parcours-portfolio {
     color: rgb(61, 57, 50);
-}
-#parcours-first-step img, #parcours-second-step img,#parcours-fourth-step img,#parcours-fifth-step img {
-    flex-basis: 60%;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-#parcours-first-step p, #parcours-second-step p,#parcours-fourth-step p,#parcours-fifth-step p {
-    flex-basis: 33.33%;
-    flex-grow: 0;
-    flex-shrink: 0;
 }
 #parcours-helmo p {
     margin: 0;
@@ -463,6 +468,7 @@ p {
     line-height: 27px;
 }
 #parcours-second-step {
+    position: relative;
     padding: 0 0 90px;
     z-index: 6;
 }
@@ -833,7 +839,6 @@ ul#skills-logo{
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
-
 }
 
 #button-contact svg {
@@ -909,10 +914,64 @@ footer figcaption{
     animation: fadeInAnimation ease 2s forwards;
     animation-delay: calc(var(--i)*0.5s);
 }
-
+#icon-timeline{
+    position: relative;
+}
+#icon-timeline:after{
+    content: '';
+    border: 1px solid rgb(61, 57, 50);
+    height: 150px;
+    position: absolute;
+    top: 20px;
+}
+#parcours-second-step:after{
+    content: '';
+    border: 1px solid rgb(61, 57, 50);
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    bottom: -200px;
+    transform: translateX(-1px);
+}
+#parcours-fourth-step{
+    position: relative;
+}
+#parcours-fourth-step:before{
+    content: '';
+    border: 1px solid rgb(61, 57, 50);
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-1px,-70%);
+}
+#parcours-fifth-step{
+    position: relative;
+}
+#parcours-fifth-step:after{
+    content: '';
+    border: 1px solid rgb(61, 57, 50);
+    position: absolute;
+    height: 250px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-1px);
+    z-index: 5;
+}
 @media screen and (max-width: 600px) {
     nav{
         display: none;
+        flex-direction: column;
+        padding: 12px 0;
+    }
+    #menu{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav.active{
+        display: flex;
     }
     #profile {
         position: relative;
@@ -947,6 +1006,15 @@ footer figcaption{
     #intro-content{
         margin-top: 60px;
     }
+    #parcours-first-step,#parcours-second-step,#parcours-fourth-step,#parcours-fifth-step{
+        display: flex;
+        flex-direction: column;
+    }
+    #parcours-first-step p,#parcours-second-step p,#parcours-fourth-step p,#parcours-fifth-step p{
+        margin-top: 16px;
+        width: 80%;
+    }
+
     .step-container{
         width: 100%;
     }
@@ -972,12 +1040,35 @@ footer figcaption{
         padding-top: 30px;
         padding-bottom: 30px;
     }
-    nav.hidden{
-        display: none;
+    #parcours-second-step:after{
+        height: 470px;
+        bottom: -400px;
+    }
+    #parcours-fourth-step:before{
+        height: 560px;
+        top: -40px;
+    }
+    #parcours-fifth-step:after{
+        height: 400px;
+        bottom: -410px;
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    nav{
+        display: none;
+        flex-direction: column;
+        padding: 12px 0;
+    }
+    #menu{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav.active{
+        display: flex;
+    }
     #picture-of-me{
         width: 460px;
     }
@@ -988,17 +1079,10 @@ footer figcaption{
         width: 545px;
     }
     #parcours-first-step, #parcours-fourth-step{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 0 12px;
         margin: 0 20px 32px;
     }
     #parcours-second-step, #parcours-fifth-step{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
         margin: 0 20px 32px;
     }
     #skills-container {
@@ -1025,24 +1109,42 @@ footer figcaption{
         align-items: center;
         gap: 10px;
     }
+    #icon-timeline:after{
+        height: 440px;
+    }
+    #parcours-second-step:after{
+        height: 780px;
+        top: 0;
+    }
+    #parcours-fourth-step:before{
+        height: 740px;
+        top: 85px;
+    }
+    #parcours-fifth-step:after{
+        height: 715px;
+        top: 0px;
+    }
 }
 @media screen and (min-width: 1000px){
-    nav ul{
-        display: flex;
-    }
     #sticky-bar{
         position: relative;
-        display: flex;
-        flex-direction: column;
+    }
+    #picture-of-me{
+        width: 500px;
     }
     nav{
-        display: inline-block;
-        background: none;
+        display: block;
         position: absolute;
-        align-self: center;
-        top: -22px;
+        background: none;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-12%);
     }
-    nav::after{
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    nav:after{
         display: none;
     }
     #menu{
@@ -1103,6 +1205,25 @@ footer figcaption{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -40%);
+    }
+    #parcours-first-step p,#parcours-second-step p,#parcours-fourth-step p,#parcours-fifth-step p{
+        margin-top: 16px;
+        width: 500px;
+    }
+    #icon-timeline:after{
+        height: 600px;
+    }
+    #parcours-second-step:after{
+        height: 900px;
+        top: 0;
+    }
+    #parcours-fourth-step:before{
+        height: 850px;
+        top: 140px;
+    }
+    #parcours-fifth-step:after{
+        height: 800px;
+        top: 0;
     }
 }
 

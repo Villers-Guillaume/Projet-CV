@@ -11,11 +11,10 @@
 <body>
 <h1 class="hidden">Mon CV</h1>
 <header>
-    <div id="login-bar">
-        <a href="#"><img src="./img/logo.png" alt="logo" id="logo-header"/></a>
-        <button>Se connecter / S'enregistrer</button>
+    <div id="top-bar">
+        <a href="https://zelda.nintendo.com/skyward-sword-hd/story/"><img src="./img/nintendo-logo.svg" alt="logo" id="logo-header"/></a>
     </div>
-    <div id="motion-button">
+    <div id="motion-button" class="hidden">
         <button>
             <span id="no-motion" class="hidden"></span>
             <span id="motion">Réduire le mouvement</span>
@@ -26,11 +25,11 @@
             <button id="menu">Menu</button>
             <a href="#"><img src="./img/logoHEPL2.jpg" alt="logo HEPL" id="logo-hepl-menu"/></a>
         </div>
-        <nav class=>
+        <nav>
             <h2 class="hidden">Menu</h2>
             <ul>
                 <li class="active">
-                    <a href="#" >Accueil</a>
+                    <a href="#">Accueil</a>
                     <svg class="hover-icon" width="11" height="8" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.5.5H.5l5.002 7z" fill-rule="evenodd"></path>
                     </svg>
@@ -70,31 +69,36 @@
         </div>
         <div id="profile-content">
             <img src="./img/logo.png" alt="logo" class="logo transition-delay" style="--i:1.5">
-           <h2 id="profile-name">
+            <h2 id="profile-name">
                <span class="title-span">
-                   <span class="title-fade" style="--i : 3">G</span>
-                   <span class="title-fade" style="--i : 10">u</span>
-                   <span class="title-fade" style="--i : 20">i</span>
-                   <span class="title-fade" style="--i : 4">l</span>
-                   <span class="title-fade" style="--i : 8">l</span>
-                   <span class="title-fade" style="--i : 15">a</span>
-                   <span class="title-fade" style="--i : 9">u</span>
-                   <span class="title-fade" style="--i : 1">m</span>
-                   <span class="title-fade" style="--i : 17">e</span>
+                   <span class="span-word">
+                       <span class="title-fade" style="--i : 3">G</span>
+                       <span class="title-fade" style="--i : 10">u</span>
+                       <span class="title-fade" style="--i : 20">i</span>
+                       <span class="title-fade" style="--i : 4">l</span>
+                       <span class="title-fade" style="--i : 8">l</span>
+                       <span class="title-fade" style="--i : 15">a</span>
+                       <span class="title-fade" style="--i : 9">u</span>
+                       <span class="title-fade" style="--i : 1">m</span>
+                       <span class="title-fade" style="--i : 17">e</span>
+                   </span>
                    <span class="space"></span>
-                   <span class="title-fade" style="--i : 19">V</span>
-                   <span class="title-fade" style="--i : 5">i</span>
-                   <span class="title-fade" style="--i : 6">l</span>
-                   <span class="title-fade" style="--i : 26">l</span>
-                   <span class="title-fade" style="--i : 2">e</span>
-                   <span class="title-fade" style="--i : 14">r</span>
-                   <span class="title-fade" style="--i : 10">s</span>
+                   <span class="span-word">
+                       <span class="title-fade" style="--i : 19">V</span>
+                       <span class="title-fade" style="--i : 5">i</span>
+                       <span class="title-fade" style="--i : 6">l</span>
+                       <span class="title-fade" style="--i : 26">l</span>
+                       <span class="title-fade" style="--i : 2">e</span>
+                       <span class="title-fade" style="--i : 14">r</span>
+                       <span class="title-fade" style="--i : 10">s</span>
+                   </span>
                </span>
-           </h2>
+            </h2>
             <p class="transition-delay" style="--i:2">Etudiant Web Developpeur</p>
         </div>
         <picture>
-            <img src="./img/pdp.png" alt="Jeune homme cheveux chataîn portant des lunettes" id="picture-of-me" class="transition-delay" style="--i:0.5">
+            <img src="./img/pdp.png" alt="Jeune homme cheveux chataîn portant des lunettes" id="picture-of-me"
+                 class="transition-delay" style="--i:0.5">
         </picture>
     </section>
 
@@ -286,7 +290,7 @@
         <div id="skills-container">
             <div id="skills-button-container">
                 <ul id="skills-button">
-                    <li >
+                    <li>
                         <button class="html active">
                             <img src="./img/skills/html-logo-select.jpg" alt="logo html">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"
@@ -296,7 +300,7 @@
                             </svg>
                         </button>
                     </li>
-                    <li >
+                    <li>
                         <button class="css">
                             <img src="./img/skills/css-logo-select.jpg" alt="logo css">
                             <svg class="icon icon--card-decoration card__icon card__icon--bottom" aria-hidden="true"

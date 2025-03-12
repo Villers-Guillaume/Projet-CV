@@ -91,37 +91,17 @@ function getSkillsButton() {
     }
     return allButtons;
 }
-function disableAnimationsAndTransitions() {
-    // Appliquer des styles pour désactiver les animations et transitions
-    const elementStopAnim = [...stepImgs,...pElements,...spanTitles,circleElement];
-
-    elementStopAnim.forEach((element) => {
-        // Désactiver les animations et transitions
-        element.style.animation = 'none';
-        element.style.transition = 'none';
-
-        // Forcer les éléments dans leur état final (par exemple, opacité à 1, etc.)
-        if (element.style.opacity === '') {
-            element.style.opacity = '1';
-        }
-
-        if (element.style.transform === '') {
-            element.style.transform = 'none';
-        }
-    });
-}
 function checkVideoState() {
     if (!noMotionElement.classList.contains(s.classHidden)) {
         videoElement.pause();
         videoElement.removeAttribute("autoplay");
-        disableAnimationsAndTransitions();
+        [...stepImgs,...pElements,...spanTitles,circleElement].forEach(element =>{
+            element.style.animation = 'none';
+            element.style.transition = 'none';
+            element.style.opacity = '1';
+        });
     } else {
         videoElement.play();
-    }
-}
-function navHiddenMobileAndTablet() {
-    if (window.innerWidth < 1000) {
-        navElement.classList.add(s.classHidden);
     }
 }
 function motion() {
@@ -137,7 +117,7 @@ function motion() {
 }
 function activateMenu() {
     menuButtonElement.addEventListener('click',()=>{
-        navElement.classList.toggle('hidden');
+        navElement.classList.toggle(s.classActive);
     })
 }
 function handleClickSkills() {
@@ -168,7 +148,6 @@ function handleClickSkills() {
 //Instructions
 
 observer.observe(circleElement);
-navHiddenMobileAndTablet();
 observerTitle();
 observeStepImg();
 observePElement();
