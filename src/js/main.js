@@ -16,7 +16,7 @@ const ulSkillInfos = document.getElementById(s.classSkillInfoUl);
 //Variables
 let options = {
     root: null,
-    threshold: 0.3
+    threshold: 0.3,
 }
 let options2 = {
     root: null,
@@ -139,7 +139,7 @@ function handleClickSkills() {
             liSkillInfos.forEach(liSkillInfo => liSkillInfo.classList.remove(s.classActive));
             liSkillInfos.forEach(liSkillInfo=>{
                 if (liSkillInfo.classList.contains(buttonSkillClass)) {
-                    liSkillInfo.classList.add(s.classActive)
+                    liSkillInfo.classList.add(s.classActive);
                 }
             })
         })

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Guillaume Villers - CV</title>
-    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/styles_3_responsive.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Guillaume Villers, étudiant en développement web à la Haute École de la Province de Liège.">
+    <meta name="keywords" content="Guillaume Villers, CV, développement web,web, HEPL, étudiant,JavaScript,HTML,, Liège">
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
     <script type="module" defer src="./src/js/main.js"></script>
 </head>
@@ -67,9 +69,9 @@
                 <source src="/img/profile-background.mp4" type="video/mp4">
             </video>
         </div>
-        <div id="profile-content">
-            <img src="./img/logo.png" alt="logo" class="logo transition-delay" style="--i:1.5">
-            <h2 id="profile-name">
+        <div id="profile-content" itemscope itemtype="http://schema.org/Person">
+            <img src="./img/logo.png" alt="logo de Guillaume Villers" class="logo transition-delay" style="--i:1.5" itemprop="logo">
+            <h2 id="profile-name" itemprop="name">
                <span class="title-span">
                    <span class="span-word">
                        <span class="title-fade" style="--i : 3">G</span>
@@ -94,11 +96,11 @@
                    </span>
                </span>
             </h2>
-            <p class="transition-delay" style="--i:2">Etudiant Web Developpeur</p>
+            <p class="transition-delay" style="--i:2" itemprop="jobTitle">Etudiant Web Developpeur</p>
         </div>
         <picture>
             <img src="./img/pdp.png" alt="Jeune homme cheveux chataîn portant des lunettes" id="picture-of-me"
-                 class="transition-delay" style="--i:0.5">
+                 class="transition-delay" style="--i:0.5" itemprop="image">
         </picture>
     </section>
 
@@ -434,7 +436,23 @@
     <section id="parcours-portfolio">
         <div id="portfolio-container">
             <div id="portfolio-content">
-                <h2>Mon portfolio</h2>
+                <h2>
+                    <span class="title-span">
+                    <span style="--i:3">M</span>
+                    <span style="--i:10">o</span>
+                    <span style="--i:20">n</span>
+                    <span class="space"></span>
+                    <span style="--i:4">p</span>
+                    <span style="--i:8">o</span>
+                    <span style="--i:15">r</span>
+                    <span style="--i:3">t</span>
+                    <span style="--i:9">f</span>
+                    <span style="--i:1">o</span>
+                    <span style="--i:17">l</span>
+                    <span style="--i:19">i</span>
+                    <span style="--i:5">o</span>
+                </span>
+                </h2>
                 <div id="portfolio-link">
                     <a href="#" id="button-decouvrir">
                         <svg class="tri-force__corner tri-force__corner--tl" xmlns="http://www.w3.org/2000/svg"
@@ -472,7 +490,7 @@
 </main>
 <div id="border-swirl"></div>
 <footer>
-    <img src="./img/logo.png" alt="Mon logo" class="logo">
+    <img src="./img/logo.png" alt="Mon logo" class="logo transition-delay">
     <div id="contact-link">
         <a href="#" id="button-contact">
             <svg class="tri-force__corner tri-force__corner--tl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -496,9 +514,9 @@
             </div>
         </div>
         <div id="hepl-footer">
-            <figure>
-                <img src="./img/logoHEPL2.jpg" alt="Haute Ecole de Liège">
-                <figcaption>
+            <figure itemscope itemtype="http://schema.org/CollegeOrUniversity">
+                <img src="./img/logoHEPL2.jpg" alt="Haute Ecole de Liège" itemprop="logo">
+                <figcaption itemprop="name">
                     Haute Ecole de la Province de Liège
                 </figcaption>
             </figure>

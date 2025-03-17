@@ -19,7 +19,7 @@
 @keyframes fadeInAnimation {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(0.625rem);
     }
 
     to {
@@ -60,13 +60,13 @@
 @property --gradient-length {
     syntax: "<length> | <percentage>";
     inherits: false;
-    initial-value: 0px;
+    initial-value: 0.0rem;
 }
 
 .step-img {
     z-index: 10;
     --radius: 0%;
-    --gradient-length: -120px;
+    --gradient-length: -7.5rem;
     --time: 3s;
 
     mask-image: radial-gradient(
@@ -107,9 +107,9 @@ body p{
     position: absolute;
     overflow:hidden;
     clip:rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
+    height: 0.0625rem;
+    width: 0.0625rem;
+    margin: -0.0625rem;
     padding:0;
     border:0;
 }
@@ -118,11 +118,11 @@ body p{
 }
 #top-bar {
     background-color: #e60012;
-    height: 48px;
+    height: 3.0rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
+    padding: 0.3125rem 0;
 }
 
 #top-bar a {
@@ -130,24 +130,24 @@ body p{
 }
 #logo-header {
     display: block;
-    width: 97px;
-    margin-left: 30px;
+    width: 6.0625rem;
+    margin-left: 1.875rem;
 }
 button {
     border-style: none;
     background-color: transparent;
     color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, "Droid Sans", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
-    line-height: 14px;
+    line-height: 0.875rem;
 }
 
 #motion-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 32px;
+    height: 2.0rem;
     background-color: black;
     z-index: 10;
 }
@@ -160,16 +160,16 @@ button {
 
 #menu {
     font-family: "Lora", serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     background-color: rgb(17, 25, 33);
-    border: 1px solid #B8A279;
+    border: 0.0625rem solid #B8A279;
     color: white;
-    padding: 15px;
-    margin-left: 20px;
+    padding: 0.9375rem;
+    margin-left: 1.25rem;
     cursor:pointer;
 }
 #menu:hover{
-    border: 1px solid white;
+    border: 0.0625rem solid white;
 }
 
 #logo-hepl-menu {
@@ -178,20 +178,20 @@ button {
 header span {
     color: white;
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 400;
-    line-height: 23px;
+    line-height: 1.4375rem;
 }
 
 #motion::before {
     content: '';
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #B8A279;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0.125rem solid #B8A279;
     border-radius: 50%;
     background-color: white;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 #motion{
     display: flex;
@@ -201,12 +201,12 @@ header span {
 #no-motion{
     background-color: #003DA0;
     display: inline-block;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #003DA0;
+    width: 0.875rem;
+    height: 0.875rem;
+    border: 0.0625rem solid #003DA0;
     border-radius: 50%;
     position: absolute;
-    left: 8px;
+    left: 0.5rem;
 }
 nav {
     display: none;
@@ -237,13 +237,13 @@ nav::after {
     background-image: linear-gradient(to right, #3D3932, #B8A279, #3D3932);
     background-position: 0 0;
     width: 100%;
-    height: 2px;
-    bottom: 0px;
+    height: 0.125rem;
+    bottom: 0.0rem;
 }
 
 nav ul {
     list-style: none;
-    padding: 13px;
+    padding: 0.8125rem;
     margin: 0;
 }
 
@@ -251,15 +251,15 @@ nav a {
     display: inline-block;
     text-decoration: none;
     color: white;
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 700;
-    line-height: 26px;
-    padding: 14px 15px 12px;
-    margin: 0 16px;
+    line-height: 1.625rem;
+    padding: 0.875rem 0.9375rem 0.75rem;
+    margin: 0 1.0rem;
 }
 
 #logo-hepl-menu {
-    width: 60px;
+    width: 3.75rem;
 }
 
 #menu-bar {
@@ -267,11 +267,11 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2px;
+    padding-bottom: 0.125rem;
 }
 #menu-bar, nav {
     background: url("../../img/noise-background.png") center center, #3D3932;
-    background-size: 150px 150px;
+    background-size: 9.375rem 9.375rem;
 }
 
 #menu-bar::before, #menu-bar::after {
@@ -281,22 +281,23 @@ nav a {
     background-image: linear-gradient(to right, #3D3932, #B8A279, #3D3932);
     background-position: 0 0;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
 }
 
 #menu-bar::after {
-    top: 60px;
+    top: 3.75rem;
 }
 
 #menu-bar::before {
-    top: -1px;
+    top: -0.0625rem;
 }
 #profile {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
     align-items: flex-end;
     position: relative;
-    padding-top: 30px;
+    padding-top: 1.875rem;
     color: white;
 }
 
@@ -324,9 +325,8 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    padding: 0 8px;
-    align-self: flex-start;
+    padding: 0 0.5rem;
+    align-self: center;
 }
 #profile p{
     margin-top: 0;
@@ -337,23 +337,23 @@ nav a {
 }
 
 .logo {
-    width: 150px;
+    width: 9.375rem;
 }
 
 #profile-name {
-    font-size: 40px;
-    line-height: 44px;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
     font-weight: 400;
-    margin: 20px 0 20px;
+    margin: 1.25rem 0 1.25rem;
 }
 .title-span span {
-    margin-right: -8px;
+    margin-right: -0.5rem;
 }
 .title-span span:last-of-type{
     margin: 0;
 }
 span.space{
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .title-fade{
@@ -369,7 +369,7 @@ span.space{
     width: 100%;
     background-image: url("../../img/border-profile.svg");
     background-position: 0 0;
-    height: 18px;
+    height: 1.125rem;
     border-bottom: solid 0 #CFC19F;
     background-repeat: repeat-x;
     position: absolute;
@@ -390,7 +390,7 @@ span.space{
     justify-content: center;
 }
 #parcours-helmo {
-    padding: 0 8px;
+    padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -402,11 +402,11 @@ span.space{
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 32px 0;
+    padding: 2.0rem 0;
 }
 
 #circle {
-    width: 300px;
+    width: 18.75rem;
     animation: spin 40s linear infinite, fadeOpacity 1s  ease-in-out forwards;
     animation-delay: calc(var(--i)* 0.02s);
     opacity: 0;
@@ -417,11 +417,11 @@ span.space{
     flex-direction: column;
     align-items: center;
     position: absolute;
-    margin-top: 90px;
+    margin-top: 5.625rem;
 }
 
 #intro-content h3 {
-    margin: 0 0 16px;
+    margin: 0 0 1.0rem;
 }
 
 #intro-content p {
@@ -433,14 +433,14 @@ span.space{
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 5.0rem;
 }
 
 .diamond {
-    margin-bottom: -22px;
+    margin-bottom: -1.375rem;
 }
 #parcours-first-step {
-    padding: 0 0 32px;
+    padding: 0 0 2.0rem;
     z-index: 6;
 }
 #parcours-helmo, #parcours-hepl, #parcours-now, #parcours-portfolio {
@@ -451,32 +451,32 @@ span.space{
 }
 
 #parcours-intro h3 {
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 2.0rem;
+    line-height: 2.1875rem;
     font-weight: 400;
 }
 
 .triforce-border svg {
     fill: white;
-    width: 32px;
-    height: 32px;
+    width: 2.0rem;
+    height: 2.0rem;
 }
 
 p {
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
 }
 #parcours-second-step {
     position: relative;
-    padding: 0 0 90px;
+    padding: 0 0 5.625rem;
     z-index: 6;
 }
 
 #parcours-helmo {
     position: relative;
     z-index: 6;
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
 .border-waves-top {
@@ -489,8 +489,8 @@ p {
     background-image: url("../../img/border-waves.svg");
     background-repeat: repeat-x;
     background-position: 0 0;
-    height: 20px;
-    border-bottom: solid 20px #CFC19F;
+    height: 1.25rem;
+    border-bottom: solid 1.25rem #CFC19F;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -514,16 +514,16 @@ p {
     object-fit: cover;
 }
 #parcours-third-step, #parcours-now-step {
-    padding: 0 16px;
+    padding: 0 1.0rem;
     position: relative;
 }
 
 #relance-content, #now-content, #portfolio-content {
     display: inline-block;
     background-color: white;
-    clip-path: polygon(0 36px, 36px 0, calc(100% - 36px) 0, 100% 36px, 100% calc(100% - 36px), calc(100% - 36px) 100%, 36px 100%, 0 calc(100% - 36px));
-    padding: 24px;
-    margin: 8px 0;
+    clip-path: polygon(0 2.25rem, 2.25rem 0, calc(100% - 2.25rem) 0, 100% 2.25rem, 100% calc(100% - 2.25rem), calc(100% - 2.25rem) 100%, 2.25rem 100%, 0 calc(100% - 2.25rem));
+    padding: 1.5rem;
+    margin: 0.5rem 0;
 }
 
 .triforce-border {
@@ -539,22 +539,22 @@ p {
 }
 
 .tri-force__corner--tl {
-    top: 8px;
+    top: 0.5rem;
     left: 0;
 }
 
 .tri-force__corner--tr {
-    top: 8px;
+    top: 0.5rem;
     right: 0;
 }
 
 .tri-force__corner--br {
-    bottom: 8px;
+    bottom: 0.5rem;
     right: 0;
 }
 
 .tri-force__corner--bl {
-    bottom: 8px;
+    bottom: 0.5rem;
     left: 0;
 }
 
@@ -564,7 +564,7 @@ p {
     align-items: center;
     z-index: 3;
     position: absolute;
-    top: -8px;
+    top: -0.5rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -584,8 +584,8 @@ p {
     background-image: url("../../img/border-waves.svg");
     background-repeat: repeat-x;
     background-position: 0 0;
-    height: 20px;
-    border-top: solid 20px #CFC19F;
+    height: 1.25rem;
+    border-top: solid 1.25rem #CFC19F;
     position: absolute;
     left: 0;
 }
@@ -601,16 +601,16 @@ p {
     background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../img/backgroundSkills.png");
     background-color: #003DA0;
     background-position: center center;
-    padding: 80px 16px 64px;
+    padding: 5.0rem 1.0rem 4.0rem;
 }
 
 #skills-button {
     display: block;
     white-space: nowrap;
-    margin: 0 calc(50vw - 42px);
+    margin: 0 calc(50vw - 2.625rem);
 }
 #skills-button button:not(.active) {
-    outline: 1px solid transparent;
+    outline: 0.0625rem solid transparent;
     outline-offset: 0;
     transition: outline-offset 0.2s ease-in-out, outline-color 0.2s ease-in-out;
 }
@@ -620,26 +620,26 @@ p {
     animation-duration: 0.2s;
     animation-timing-function: ease-in;
     outline-color: #B8A279;
-    outline-offset: 5px;
+    outline-offset: 0.3125rem;
 }
 
 #skills-button button.active {
-    outline: 1px solid #B8A279;
-    outline-offset: 5px;
+    outline: 0.0625rem solid #B8A279;
+    outline-offset: 0.3125rem;
     filter: none;
 }
 
 #skills-button button {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 0 3px 10px 3px;
-    border: 1px solid #B8A279;
+    padding: 0 0.1875rem 0.625rem 0.1875rem;
+    border: 0.0625rem solid #B8A279;
     position: relative;
 }
 
 #skills-button li {
     display: inline-block;
-    margin-right: 24px;
-    width: 94px;
+    margin-right: 1.5rem;
+    width: 5.875rem;
 }
 #skills-button * button{
     filter: grayscale(100%) sepia(60%);
@@ -656,22 +656,22 @@ ul#skills-logo{
     display: none;
 }
 #skills-container{
-    padding: 40px 24px 0;
+    padding: 2.5rem 1.5rem 0;
 }
 #skills-button svg {
-    width: 62px;
-    height: 38px;
+    width: 3.875rem;
+    height: 2.375rem;
     color: #B8A279;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -30px;
+    bottom: -1.875rem;
     margin: 0 auto;
 }
 #skills-button img {
-    width: 86px;
+    width: 5.375rem;
     position: relative;
-    margin-top: -8px;
+    margin-top: -0.5rem;
 }
 #skills-info {
     grid-area: content;
@@ -690,14 +690,14 @@ ul#skills-logo{
     fill: rgb(184, 162, 121);
 }
 #skills-logo img {
-    width: 358px;
+    width: 22.375rem;
 }
 .skill-logo-li{
     display: inline-block;
 }
 #skills-info svg {
-    width: 37px;
-    margin-bottom: 16px;
+    width: 2.3125rem;
+    margin-bottom: 1.0rem;
 }
 
 #skills-info p {
@@ -706,7 +706,7 @@ ul#skills-logo{
 }
 
 #skills-info h3 {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 #skills h2, #skills p, #skills h3 {
@@ -714,19 +714,19 @@ ul#skills-logo{
     font-weight: 400;
 }
 #parcours-hepl {
-    padding: 80px 16px 32px;
+    padding: 5.0rem 1.0rem 2.0rem;
 }
 #portfolio-container{
     display: inline-block;
     position: relative;
 }
 #portfolio-content{
-    padding: 40px 100px;
+    padding: 2.5rem 6.25rem;
 }
 #parcours-portfolio {
     background: url("../../img/parcours-portfolio-background.png") no-repeat center;
     background-size: cover;
-    padding: 48px 8px;
+    padding: 3.0rem 0.5rem;
     margin: 0 auto;
     position: relative;
 }
@@ -735,7 +735,7 @@ ul#skills-logo{
     width: 100%;
     background-image: url("../../img/border-profile.svg");
     background-position: 0 0;
-    height: 18px;
+    height: 1.125rem;
     border-bottom: solid 0 #CFC19F;
     background-repeat: repeat-x;
     position: absolute;
@@ -744,37 +744,37 @@ ul#skills-logo{
 }
 
 #parcours-portfolio .triforce-border .tri-force__corner--tl {
-    top: 8px;
+    top: 0.5rem;
     left: 0;
 }
 
 #parcours-portfolio .triforce-border .tri-force__corner--tr {
-    top: 8px;
+    top: 0.5rem;
     right: 0;
 }
 
 #parcours-portfolio .triforce-border .tri-force__corner--bl {
-    bottom: 8px;
-    left: 0px;
+    bottom: 0.5rem;
+    left: 0.0rem;
 }
 
 #parcours-portfolio .triforce-border .tri-force__corner--br {
-    bottom: 8px;
-    right: 0px;
+    bottom: 0.5rem;
+    right: 0.0rem;
 }
 
 .pad--8 {
-    padding: 0 8px;
+    padding: 0 0.5rem;
 }
 
 #button-decouvrir svg {
     fill: rgb(0, 80, 230);
-    width: 14px;
-    height: 14px;
+    width: 0.875rem;
+    height: 0.875rem;
 }
 
 #portfolio-content h2 {
-    margin: 0 0 16px;
+    margin: 0 0 1.0rem;
 }
 
 #portfolio-link {
@@ -789,34 +789,34 @@ ul#skills-logo{
     text-decoration: none;
     color: white;
     font-family: "Lora", serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 1.125rem;
     margin: 0;
-    padding: 2px;
+    padding: 0.125rem;
 }
 
 #button-decouvrir span {
     background-size: 300% 100%;
     background: linear-gradient(45deg, #0050E6, #003DA0) 50% 0;
-    padding: 13px 25px 17px 25px;
-    clip-path: polygon(0 19px, 19px 0, 100% 0, 100% calc(100% - 19px), calc(100% - 19px) 100%, 0 100%);
+    padding: 0.8125rem 1.5625rem 1.0625rem 1.5625rem;
+    clip-path: polygon(0 1.1875rem, 1.1875rem 0, 100% 0, 100% calc(100% - 1.1875rem), calc(100% - 1.1875rem) 100%, 0 100%);
 }
 
 #button-decouvrir .tri-force__corner--tl {
-    top: 2px;
-    left: 2px;
+    top: 0.125rem;
+    left: 0.125rem;
 }
 
 #button-decouvrir .tri-force__corner--br {
-    bottom: 2px;
-    right: 2px;
+    bottom: 0.125rem;
+    right: 0.125rem;
 }
 
 #border-swirl {
     position: relative;
-    border-bottom: solid 3px #CFC19F;
-    margin-top: 50px;
+    border-bottom: solid 0.1875rem #CFC19F;
+    margin-top: 3.125rem;
 }
 
 #border-swirl::after {
@@ -824,26 +824,26 @@ ul#skills-logo{
     width: 100%;
     background-image: url("../../img/border-swirls.svg");
     background-position: 0 0;
-    height: 32px;
-    border-bottom: solid 2px #CFC19F;
+    height: 2.0rem;
+    border-bottom: solid 0.125rem #CFC19F;
     background-repeat: repeat-x;
     position: absolute;
     left: 0;
-    bottom: 3px;
+    bottom: 0.1875rem;
 }
 
 #button-contact {
     text-decoration: none;
     color: rgb(0, 80, 230);
     font-family: "Lora", serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 1.125rem;
 }
 
 #button-contact svg {
     fill: white;
-    width: 14px;
+    width: 0.875rem;
 }
 
 footer {
@@ -854,24 +854,24 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 40px 0;
+    padding: 2.5rem 0;
 }
 
 footer .logo {
     align-self: center;
-    margin-top: -130px;
+    margin-top: -8.125rem;
 }
 
 #contact-link {
     display: inline-block;
-    margin: 30px 0;
-    padding: 0 8px;
+    margin: 1.875rem 0;
+    padding: 0 0.5rem;
 }
 #contact-link span {
     display: inline-block;
     background-color: #F3F2EE;
-    clip-path: polygon(0 19px, 19px 0, 100% 0, 100% calc(100% - 19px), calc(100% - 19px) 100%, 0 100%);
-    padding: 13px 25px 17px 25px;
+    clip-path: polygon(0 1.1875rem, 1.1875rem 0, 100% 0, 100% calc(100% - 1.1875rem), calc(100% - 1.1875rem) 100%, 0 100%);
+    padding: 0.8125rem 1.5625rem 1.0625rem 1.5625rem;
 }
 #button-contact{
     display: inline-flex;
@@ -881,7 +881,7 @@ footer .logo {
 }
 #button-contact .tri-force__corner--tl{
     top: 0;
-    left: 0px;
+    left: 0.0rem;
 }
 
 #button-contact .tri-force__corner--br{
@@ -889,24 +889,24 @@ footer .logo {
     right: 0;
 }
 #social-media img {
-    width: 48px;
+    width: 3.0rem;
 }
 #follow {
     margin: 0;
     font-weight: 700;
 }
 #social-media{
-    margin: 16px;
+    margin: 1.0rem;
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 1.5rem;
 }
 footer figcaption{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: "Source Sans Pro",sans-serif;
 }
 #copyright{
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .transition-delay{
@@ -919,50 +919,50 @@ footer figcaption{
 }
 #icon-timeline:after{
     content: '';
-    border: 1px solid rgb(61, 57, 50);
-    height: 150px;
+    border: 0.0625rem solid rgb(61, 57, 50);
+    height: 9.375rem;
     position: absolute;
-    top: 20px;
+    top: 1.25rem;
 }
 #parcours-second-step:after{
     content: '';
-    border: 1px solid rgb(61, 57, 50);
-    height: 250px;
+    border: 0.0625rem solid rgb(61, 57, 50);
+    height: 15.625rem;
     position: absolute;
     left: 50%;
-    bottom: -200px;
-    transform: translateX(-1px);
+    bottom: -12.5rem;
+    transform: translateX(-0.0625rem);
 }
 #parcours-fourth-step{
     position: relative;
 }
 #parcours-fourth-step:before{
     content: '';
-    border: 1px solid rgb(61, 57, 50);
-    height: 250px;
+    border: 0.0625rem solid rgb(61, 57, 50);
+    height: 15.625rem;
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translate(-1px,-70%);
+    transform: translate(-0.0625rem,-70%);
 }
 #parcours-fifth-step{
     position: relative;
 }
 #parcours-fifth-step:after{
     content: '';
-    border: 1px solid rgb(61, 57, 50);
+    border: 0.0625rem solid rgb(61, 57, 50);
     position: absolute;
-    height: 250px;
+    height: 15.625rem;
     bottom: 0;
     left: 50%;
-    transform: translateX(-1px);
+    transform: translateX(-0.0625rem);
     z-index: 5;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
     nav{
         display: none;
         flex-direction: column;
-        padding: 12px 0;
+        padding: 0.75rem 0;
     }
     #menu{
         display: block;
@@ -981,11 +981,12 @@ footer figcaption{
         align-items: center;
     }
     #picture-of-me {
-        width: 288px;
-        margin-top: 48px;
+        width: 18.0rem;
+        margin-top: 3.0rem;
     }
     #profile-content{
-        margin-top: 24px;
+        align-self: center;
+        margin-top: 1.5rem;
     }
 
     #profile-content p {
@@ -993,25 +994,25 @@ footer figcaption{
     }
 
     #profile-content h2 {
-        margin: 0 0 20px;
+        margin: 0 0 1.25rem;
     }
 
     .step-img {
-        width: 358px;
+        width: 22.375rem;
     }
 
     #circle {
-        width: 232px;
+        width: 14.5rem;
     }
     #intro-content{
-        margin-top: 60px;
+        margin-top: 3.75rem;
     }
     #parcours-first-step,#parcours-second-step,#parcours-fourth-step,#parcours-fifth-step{
         display: flex;
         flex-direction: column;
     }
     #parcours-first-step p,#parcours-second-step p,#parcours-fourth-step p,#parcours-fifth-step p{
-        margin-top: 16px;
+        margin-top: 1.0rem;
         width: 80%;
     }
 
@@ -1021,7 +1022,7 @@ footer figcaption{
     #skills-container {
         text-align: center;
         display: grid;
-        gap: 24px;
+        gap: 1.5rem;
         grid-template-columns: 1fr;
         grid-template-areas:"image"
         "button"
@@ -1031,34 +1032,34 @@ footer figcaption{
         width: 100vw;
         overflow-x: auto;
         overflow-y: hidden;
-        padding: 20px 0;
+        padding: 1.25rem 0;
         justify-self: center;
-        margin: 0 -16px;
+        margin: 0 -1.0rem;
     }
 
     #portfolio-content{
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 1.875rem;
+        padding-bottom: 1.875rem;
     }
     #parcours-second-step:after{
-        height: 470px;
-        bottom: -400px;
+        height: 29.375rem;
+        bottom: -25.0rem;
     }
     #parcours-fourth-step:before{
-        height: 560px;
-        top: -40px;
+        height: 35.0rem;
+        top: -2.5rem;
     }
     #parcours-fifth-step:after{
-        height: 400px;
-        bottom: -410px;
+        height: 25.0rem;
+        bottom: -25.625rem;
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 1000px) {
+@media screen and (min-width: 37.5625rem) and (max-width: 62.5rem) {
     nav{
         display: none;
         flex-direction: column;
-        padding: 12px 0;
+        padding: 0.75rem 0;
     }
     #menu{
         display: block;
@@ -1070,20 +1071,20 @@ footer figcaption{
         display: flex;
     }
     #picture-of-me{
-        width: 460px;
+        width: 28.75rem;
     }
     #profile-content{
-        padding: 48px 8px;
+        padding: 3.0rem 0.5rem;
     }
     .step-img{
-        width: 545px;
+        width: 34.0625rem;
     }
     #parcours-first-step, #parcours-fourth-step{
-        padding: 0 12px;
-        margin: 0 20px 32px;
+        padding: 0 0.75rem;
+        margin: 0 1.25rem 2.0rem;
     }
     #parcours-second-step, #parcours-fifth-step{
-        margin: 0 20px 32px;
+        margin: 0 1.25rem 2.0rem;
     }
     #skills-container {
         text-align: center;
@@ -1096,7 +1097,7 @@ footer figcaption{
         align-self: center;
     }
     #skills-logo{
-        margin-bottom: 64px;
+        margin-bottom: 4.0rem;
     }
     #footer-main{
         display: flex;
@@ -1107,30 +1108,30 @@ footer figcaption{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 0.625rem;
     }
     #icon-timeline:after{
-        height: 440px;
+        height: 27.5rem;
     }
     #parcours-second-step:after{
-        height: 780px;
+        height: 48.75rem;
         top: 0;
     }
     #parcours-fourth-step:before{
-        height: 740px;
-        top: 85px;
+        height: 46.25rem;
+        top: 5.3125rem;
     }
     #parcours-fifth-step:after{
-        height: 715px;
-        top: 0px;
+        height: 44.6875rem;
+        top: 0.0rem;
     }
 }
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 62.5rem){
     #sticky-bar{
         position: relative;
     }
     #picture-of-me{
-        width: 500px;
+        width: 31.25rem;
     }
     nav{
         display: block;
@@ -1184,11 +1185,11 @@ footer figcaption{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "button image content";
-        margin-bottom: 50px;
+        margin-bottom: 3.125rem;
 
     }
     #skills-button li{
-        margin: 32px 0 0;
+        margin: 2.0rem 0 0;
     }
     #skills-button{
         display: grid;
@@ -1207,24 +1208,22 @@ footer figcaption{
         transform: translate(-50%, -40%);
     }
     #parcours-first-step p,#parcours-second-step p,#parcours-fourth-step p,#parcours-fifth-step p{
-        margin-top: 16px;
-        width: 500px;
+        margin-top: 1.0rem;
+        width: 31.25rem;
     }
     #icon-timeline:after{
-        height: 600px;
+        height: 37.5rem;
     }
     #parcours-second-step:after{
-        height: 900px;
+        height: 56.25rem;
         top: 0;
     }
     #parcours-fourth-step:before{
-        height: 850px;
-        top: 140px;
+        height: 53.125rem;
+        top: 8.75rem;
     }
     #parcours-fifth-step:after{
-        height: 800px;
+        height: 50.0rem;
         top: 0;
     }
 }
-
-
